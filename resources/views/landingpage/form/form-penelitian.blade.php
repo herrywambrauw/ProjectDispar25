@@ -20,11 +20,6 @@
         </div>
 
         <div>
-            <label>Tanggal Lahir</label>
-            <input type="date" name="ttl" required class="w-full p-3 border rounded-lg">
-        </div>
-
-        <div>
             <label>NIK</label>
             <input name="nik" required class="w-full p-3 border rounded-lg">
         </div>

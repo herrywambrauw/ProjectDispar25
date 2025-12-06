@@ -21,11 +21,6 @@
         </div>
 
         <div>
-            <label>Tanggal Lahir</label>
-            <input type="date" name="ttl" required class="w-full p-3 border rounded-lg">
-        </div>
-
-        <div>
             <label>NIM/NIS</label>
             <input name="nim" required class="w-full p-3 border rounded-lg">
         </div>
