@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
 
 
-            $table->enum('role', ['admin', 'Pendaftar', 'Penelitian','KKN','Magang', 'PKL','Pembimbing','Sekretariat','Pemasaran'])
+            $table->enum('role', ['admin', 'pendaftar', 'penelitian','kkn','magang', 'pkl','pembimbing','sekretariat','pemasaran'])
                   ->default('pendaftar')
                   ->after('password');
 

@@ -9,6 +9,8 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
+use function PHPUnit\Framework\returnSelf;
+
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -81,13 +83,43 @@ class User extends Authenticatable
         return $this->role === 'admin';
     }
 
-    public function isVerifikator()
+    public function isPendaftar()
     {
-        return $this->role === 'verifikator';
+        return $this->role === 'pendaftaran';
     }
 
-    public function isMahasiswa()
+    public function isPenelitian()
     {
-        return $this->role === 'mahasiswa';
+        return $this->role === 'penelitan';
+    }
+
+    public function isKkn()
+    {
+        return $this->role === 'kkn';
+    }
+
+    public function isMagang()
+    {
+        return $this->role === 'magang';
+    }
+
+    public function isPkl()
+    {
+        return $this -> role === 'pkl';
+    }
+
+    public function isPembimbing()
+    {
+        return $this->role === 'pembimbing';
+    }
+
+    public function isSekretariat()
+    {
+        return $this->role === 'sekretariat';
+    }
+
+    public function isPemasaran()
+    {
+        return $this->role === 'pemasaran';
     }
 }
