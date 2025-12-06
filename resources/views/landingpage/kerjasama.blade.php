@@ -1,4 +1,3 @@
-<?php include 'components/header.php'; ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -25,8 +24,8 @@
 
             <!-- FILTER -->
             <form method="GET">
-                <select name="filter" 
-                        onchange="this.form.submit()" 
+                <select name="filter"
+                        onchange="this.form.submit()"
                         class="px-4 py-2 border rounded-lg text-gray-700 bg-white shadow-sm">
                     <option value="">Filter Tanggal</option>
                     <option value="terdekat" <?= (isset($_GET['filter']) && $_GET['filter']=='terdekat') ? 'selected' : '' ?>>
@@ -107,7 +106,5 @@
     </div>
 </section>
 
-
-<?php include 'components/footer.php'; ?>
 </body>
 </html>

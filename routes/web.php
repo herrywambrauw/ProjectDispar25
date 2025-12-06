@@ -6,6 +6,16 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('pendaftaran', function (){
+    return view('landingpage.pendaftaran');
+});
+
+Route::get('kerjasama', function(){
+    return view('landingpage.kerjasama');
+});
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

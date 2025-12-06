@@ -1,4 +1,3 @@
-<?php include 'components/header.php'; ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -81,6 +80,5 @@
     </div>
 </section>
 
-<?php include 'components/footer.php'; ?>
 </body>
 </html>
