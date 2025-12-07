@@ -5,6 +5,14 @@
 // Mobile-first: hamburger menu shows nav on small screens.
 
 ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Program - DISPAR Bantul</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 <header class="bg-blue-900 text-white shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
@@ -23,8 +31,8 @@
 
         <!-- CTA Buttons -->
         <div class="hidden md:flex space-x-3">
-            <a href="#" class="bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-600 text-sm">Buat Akun</a>
-            <a href="#" class="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-blue-900 text-sm">Masuk</a>
+            <a href="{{ route('register') }}" class="bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-600 text-sm">Buat Akun</a>
+            <a href="{{ route('login') }}" class="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-blue-900 text-sm">Masuk</a>
         </div>
 
         <!-- MOBILE MENU BUTTON -->
@@ -44,8 +52,8 @@
         <a href="#" class="block py-2 border-b border-white/20">Galeri Kegiatan</a>
 
         <div class="pt-2">
-            <a href="#" class="block bg-blue-700 px-4 py-2 rounded-lg text-center">Buat Akun</a>
-            <a href="#" class="block border border-white px-4 py-2 rounded-lg text-center mt-2">Masuk</a>
+            <a href="{{ route('register') }}" class="block bg-blue-700 px-4 py-2 rounded-lg text-center">Buat Akun</a>
+            <a href="{{ route('login') }}" class="block border border-white px-4 py-2 rounded-lg text-center mt-2">Masuk</a>
         </div>
     </div>
 </header>
@@ -55,3 +63,5 @@ document.getElementById("menu-btn").onclick = function () {
     document.getElementById("mobile-menu").classList.toggle("hidden");
 };
 </script>
+</body>
+</html>

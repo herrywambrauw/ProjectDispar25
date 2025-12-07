@@ -1,3 +1,5 @@
+@include('landingpage.components.header')
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -95,6 +97,6 @@
     </div>
 </section>
 
-
+@include('landingpage.components.footer')
 </body>
 </html>

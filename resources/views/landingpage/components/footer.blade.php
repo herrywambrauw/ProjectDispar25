@@ -84,8 +84,5 @@
 
             </div>
         </div>
-        <div class="border-t border-slate-100 mt-8 pt-6 text-center text-sm text-slate-500">
-      © <?= date('Y') ?> Dinas Pariwisata Kabupaten Bantul — Semua hak dilindungi.
-    </div>
     </div>
 </footer>
