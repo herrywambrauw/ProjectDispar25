@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisteredUserController;
 
 Route::get('/', function () {
     return view('index');
@@ -13,6 +14,20 @@ Route::get('pendaftaran', function (){
 Route::get('kerjasama', function(){
     return view('landingpage.kerjasama');
 });
+
+// Step 1
+Route::get('/register-step1', function () {
+    return view('auth.register-step1');
+})->name('register.step1');
+
+Route::post('/register-step1', [RegisteredUserController::class, 'storeStep1'])->name('register.step1.submit');
+
+// Step 2
+Route::get('/register-step2', function () {
+    return view('auth.register-step2');
+})->name('register.step2');
+
+Route::post('/register-step2', [RegisteredUserController::class, 'storeStep2'])->name('register.step2.submit');
 
 
 

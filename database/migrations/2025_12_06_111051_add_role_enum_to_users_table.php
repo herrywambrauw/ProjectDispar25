@@ -17,6 +17,7 @@ return new class extends Migration
 
 
             $table->string('username')->nullable()->after('email');
+            $table->string('nama_lengkap')->nullable();
             $table->string('no_hp')->nullable();
             $table->string('nik')->nullable();
             $table->enum('jenis_kelamin', ['L', 'P'])->nullable();
@@ -33,6 +34,7 @@ return new class extends Migration
             $table->dropColumn([
                 'role',
                 'username',
+                'nama_lengkap',
                 'no_hp',
                 'nik',
                 'jenis_kelamin',

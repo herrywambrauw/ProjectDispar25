@@ -31,7 +31,7 @@
 
         <!-- CTA Buttons -->
         <div class="hidden md:flex space-x-3">
-            <a href="{{ route('register') }}" class="bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-600 text-sm">Buat Akun</a>
+            <a href="{{ route('register.step1') }}" class="bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-600 text-sm">Buat Akun</a>
             <a href="{{ route('login') }}" class="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-blue-900 text-sm">Masuk</a>
         </div>
 
@@ -52,7 +52,7 @@
         <a href="#" class="block py-2 border-b border-white/20">Galeri Kegiatan</a>
 
         <div class="pt-2">
-            <a href="{{ route('register') }}" class="block bg-blue-700 px-4 py-2 rounded-lg text-center">Buat Akun</a>
+            <a href="{{ route('register.step1') }}" class="block bg-blue-700 px-4 py-2 rounded-lg text-center">Buat Akun</a>
             <a href="{{ route('login') }}" class="block border border-white px-4 py-2 rounded-lg text-center mt-2">Masuk</a>
         </div>
     </div>
