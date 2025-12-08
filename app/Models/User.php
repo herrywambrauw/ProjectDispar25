@@ -32,6 +32,7 @@ class User extends Authenticatable
         // Tambahkan kolom baru sesuai database Anda:
         'role',
         'username',
+        'nama_lengkap',
         'no_hp',
         'nik',
         'jenis_kelamin',
