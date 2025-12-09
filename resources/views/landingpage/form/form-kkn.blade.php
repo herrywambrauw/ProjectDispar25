@@ -1,93 +1,120 @@
-<?php include 'components/header.php'; ?>
+@include('landingpage.components.header')
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Form Pendaftaran KKN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Magang - DISPAR Bantul</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-blue-50">
+<body class="bg-white text-gray-800">
 
-<section class="max-w-3xl mx-auto bg-white p-8 mt-10 rounded-xl shadow">
-    <h1 class="text-3xl text-blue-700 font-bold mb-6 text-center">Form Pendaftaran KKN</h1>
+<section class="py-16 px-6">
+    <div class="max-w-5xl mx-auto bg-blue-100 p-10 rounded-xl shadow-lg">
 
-    <form action="proses-kkn.php" method="POST" enctype="multipart/form-data" class="space-y-4">
+        <h1 class="text-center text-3xl font-bold text-blue-900 mb-10">
+            Formulir Pendaftaran Kuliah Kerja Nyata
+        </h1>
 
-        <div>
-            <label>Nama Lengkap</label>
-            <input name="nama" required class="w-full p-3 border rounded-lg">
-        </div>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            @csrf
 
-        <div>
-            <label>NIM</label>
-            <input name="nim" required class="w-full p-3 border rounded-lg">
-        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-        <div>
-            <label>Email</label>
-            <input type="email" name="email" required class="w-full p-3 border rounded-lg">
-        </div>
+                <!-- Bagian Kiri -->
+                <div class="bg-white p-6 rounded-xl shadow">
 
-        <div>
-            <label>Jenis Kelamin</label>
-            <select name="jk" required class="w-full p-3 border rounded-lg">
-                <option>Laki-laki</option>
-                <option>Perempuan</option>
-            </select>
-        </div>
+                    <div class="text-center bg-blue-900 text-white py-2 rounded-lg mb-6 font-semibold">
+                        Lengkapi Data Diri Anda
+                    </div>
 
-        <div>
-            <label>No Handphone</label>
-            <input name="nohp" required class="w-full p-3 border rounded-lg">
-        </div>
+                    <!-- Nama -->
+                    <label class="block font-semibold mb-1">Nama Lengkap</label>
+                    <input type="text" name="nama" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Lengkap">
 
-        <div>
-            <label>Asal Instansi Pendidikan</label>
-            <input name="instansi" required class="w-full p-3 border rounded-lg">
-        </div>
+                    <!-- Email -->
+                    <label class="block font-semibold mb-1">Email</label>
+                    <input type="email" name="email" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Email">
 
-        <div>
-            <label>Prodi/Jurusan</label>
-            <input name="prodi" required class="w-full p-3 border rounded-lg">
-        </div>
+                    <!-- NIM / NIS -->
+                    <label class="block font-semibold mb-1">NIM / NIS</label>
+                    <input type="text" name="nim" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="NIM / NIS">
 
-        <div>
-            <label>Fakultas</label>
-            <input name="fakultas" required class="w-full p-3 border rounded-lg">
-        </div>
+                    <!-- Jenis Kelamin -->
+                    <label class="block font-semibold mb-1">Jenis Kelamin</label>
+                    <select name="jenis_kelamin" class="w-full border rounded-lg px-3 py-2 mb-4">
+                        <option>Pilih Jenis Kelamin</option>
+                        <option>Laki-laki</option>
+                        <option>Perempuan</option>
+                    </select>
 
-        <div>
-            <label>Nama Dospem</label>
-            <input name="dospem" required class="w-full p-3 border rounded-lg">
-        </div>
+                    <!-- No HP -->
+                    <label class="block font-semibold mb-1">No Handphone</label>
+                    <input type="text" name="nohp" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="No Handphone">
 
-        <div>
-            <label>No HP Dospem</label>
-            <input name="hp_dospem" required class="w-full p-3 border rounded-lg">
-        </div>
+                </div>
 
-        <div>
-            <label>Tanggal KKN</label>
-            <input type="date" name="tanggal_kkn" required class="w-full p-3 border rounded-lg">
-        </div>
+                <!-- Bagian Kanan -->
+                <div class="bg-white p-6 rounded-xl shadow">
 
-        <div>
-            <label>Tujuan Lokasi</label>
-            <input name="lokasi" required class="w-full p-3 border rounded-lg">
-        </div>
+                    <div class="text-center bg-blue-900 text-white py-2 rounded-lg mb-6 font-semibold">
+                        Lengkapi Data Diri Instansi Anda
+                    </div>
 
-        <div>
-            <label>Upload Surat Pengantar</label>
-            <input type="file" name="surat" required class="w-full p-3 border rounded-lg">
-        </div>
+                    <!-- Asal Instansi -->
+                    <label class="block font-semibold mb-1">Asal Instansi</label>
+                    <input type="text" name="instansi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Asal Instansi">
 
-        <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">Kirim Pendaftaran</button>
+                    <!-- Prodi -->
+                    <label class="block font-semibold mb-1">Prodi / Jurusan</label>
+                    <input type="text" name="prodi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Prodi / Jurusan">
 
-    </form>
+                    <!-- Fakultas -->
+                    <label class="block font-semibold mb-1">Fakultas</label>
+                    <input type="text" name="fakultas" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Fakultas">
+
+                    <!-- Nama Dosen / Pembimbing -->
+                    <label class="block font-semibold mb-1">Nama Dosen Pembimbing</label>
+                    <input type="text" name="pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Dosen / Guru Pembimbing">
+
+                    <!-- No HP Dosen -->
+                    <label class="block font-semibold mb-1">No. Handphone Dosen Pembimbing</label>
+                    <input type="text" name="nohp_pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="No. HP Pembimbing">
+
+                    <!-- Tanggal Mulai -->
+                    <label class="block font-semibold mb-1">Tanggal Mulai</label>
+                    <input type="date" name="tanggal_mulai" class="w-full border rounded-lg px-3 py-2 mb-4">
+
+                    <!-- Lokasi Tujuan KKN -->
+                    <label class="block font-semibold mb-1">Lokasi Tujuan KKN</label>
+                    <input type="text" name="lokasi_tujuan" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Lokasi Tujuan KKN">
+
+                    <!-- Upload Surat -->
+                    <label class="block font-semibold mb-1">Unggah Surat Permohonan KKN (PDF)</label>
+                    <input type="file" name="surat" accept="application/pdf"
+                           class="w-full border rounded-lg px-3 py-2 mb-4 bg-white">
+
+                </div>
+            </div>
+
+            <div class="flex justify-between mt-10">
+                <a href="/pendaftaran" class="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">
+                    Kembali
+                </a>
+
+                <button type="submit" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                    Daftar
+                </button>
+            </div>
+
+        </form>
+
+    </div>
 </section>
 
-<?php include 'components/footer.php'; ?>
+@include('landingpage.components.footer')
+
 </body>
 </html>

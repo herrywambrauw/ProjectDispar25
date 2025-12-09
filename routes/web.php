@@ -15,6 +15,26 @@ Route::get('kerjasama', function(){
     return view('landingpage.kerjasama');
 });
 
+Route::get('dashboard-admin', function(){
+    return view('dashboard.admin.dashboard-admin');
+});
+
+Route::get('form-magang', function(){
+    return view('landingpage.form.form-magang');
+});
+
+Route::get('form-kkn', function(){
+    return view('landingpage.form.form-kkn');
+});
+
+Route::get('form-penelitian', function(){
+    return view('landingpage.form.form-penelitian');
+});
+
+Route::get('form-pkl', function(){
+    return view('landingpage.form.form-pkl');
+});
+
 // Step 1
 Route::get('/register-step1', function () {
     return view('auth.register-step1');
