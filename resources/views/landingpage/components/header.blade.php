@@ -5,14 +5,6 @@
 // Mobile-first: hamburger menu shows nav on small screens.
 
 ?>
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Program - DISPAR Bantul</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
 <header class="bg-blue-900 text-white shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 

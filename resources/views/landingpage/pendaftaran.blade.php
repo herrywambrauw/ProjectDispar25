@@ -31,7 +31,7 @@
                 Raih pengalaman nyata di dunia kerja pariwisata! PKL di Dinas Pariwisata memberikan kesempatan belajar langsung tentang pengelolaan destinasi dan pelayanan publik.
             </p>
 
-            <a href="#" class="bg-white text-blue-900 px-4 py-2 rounded-lg shadow hover:bg-gray-200">Daftar Sekarang</a>
+            <a href="/form-pkl" class="bg-white text-blue-900 px-4 py-2 rounded-lg shadow hover:bg-gray-200">Daftar Sekarang</a>
         </div>
 
         <!-- Magang -->
@@ -51,7 +51,7 @@
                 Tingkatkan kompetensi profesional melalui Program Magang di Dinas Pariwisata. Belajar administrasi, pemasaran, dan pengembangan wisata langsung dari ahlinya.
             </p>
 
-            <a href="#" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">Daftar Sekarang</a>
+            <a href="/form-magang" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">Daftar Sekarang</a>
         </div>
 
         <!-- Penelitian -->
@@ -71,7 +71,7 @@
                 Kembangkan karya ilmiah Anda dengan data terpercaya! Dinas Pariwisata membuka akses informasi lapangan untuk mendukung penyusunan tugas akhir dan riset ilmiah.
             </p>
 
-            <a href="#" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">Daftar Sekarang</a>
+            <a href="/form-penelitian" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">Daftar Sekarang</a>
         </div>
 
         <!-- KKN -->
@@ -91,7 +91,7 @@
                 Wujudkan kontribusi nyata untuk masyarakat! Program KKN mengajak mahasiswa terlibat dalam pengembangan potensi wisata daerah.
             </p>
 
-            <a href="#" class="bg-white text-blue-900 px-4 py-2 rounded-lg shadow hover:bg-gray-200">Daftar Sekarang</a>
+            <a href="/form-kkn" class="bg-white text-blue-900 px-4 py-2 rounded-lg shadow hover:bg-gray-200">Daftar Sekarang</a>
         </div>
 
     </div>

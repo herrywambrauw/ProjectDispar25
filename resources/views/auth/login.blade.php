@@ -95,7 +95,7 @@
             <!-- Sign Up Link -->
             <div class="mt-6 text-center text-sm text-gray-600">
                 {{ __('Belum memiliki akun?') }}
-                <a href="{{ route('register') }}" class="text-blue-600 font-semibold hover:underline">
+                <a href="{{ route('register.step1') }}" class="text-blue-600 font-semibold hover:underline">
                     {{ __('Daftar Sekarang') }}
                 </a>
             </div>
