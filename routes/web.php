@@ -11,6 +11,14 @@ Route::get('pendaftaran', function (){
     return view('landingpage.pendaftaran');
 });
 
+Route::get('dokumentasi', function(){
+    return view('landingpage.dokumentasi');
+});
+
+Route::get('detail-dokumentasi', function(){
+    return view('landingpage.detail-dokumentasi');
+});
+
 Route::get('kerjasama', function(){
     return view('landingpage.kerjasama');
 });
