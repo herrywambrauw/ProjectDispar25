@@ -43,14 +43,12 @@ Route::get('form-pkl', function(){
     return view('landingpage.form.form-pkl');
 });
 
-// Step 1
 Route::get('/register-step1', function () {
     return view('auth.register-step1');
 })->name('register.step1');
 
 Route::post('/register-step1', [RegisteredUserController::class, 'storeStep1'])->name('register.step1.submit');
 
-// Step 2
 Route::get('/register-step2', function () {
     return view('auth.register-step2');
 })->name('register.step2');
