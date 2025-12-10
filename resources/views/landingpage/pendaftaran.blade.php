@@ -15,7 +15,7 @@
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
 
         <!-- PKL -->
-        <div class="bg-blue-900 text-white p-8 rounded-xl shadow-lg">
+        <div class="bg-[#0D2C54] text-white p-8 rounded-xl shadow-lg">
             <div class="flex items-center space-x-4 mb-4">
                 <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="white">
@@ -51,7 +51,7 @@
                 Tingkatkan kompetensi profesional melalui Program Magang di Dinas Pariwisata. Belajar administrasi, pemasaran, dan pengembangan wisata langsung dari ahlinya.
             </p>
 
-            <a href="/form-magang" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">Daftar Sekarang</a>
+            <a href="/form-magang" class="bg-[#0D2C54] text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">Daftar Sekarang</a>
         </div>
 
         <!-- Penelitian -->
@@ -71,11 +71,11 @@
                 Kembangkan karya ilmiah Anda dengan data terpercaya! Dinas Pariwisata membuka akses informasi lapangan untuk mendukung penyusunan tugas akhir dan riset ilmiah.
             </p>
 
-            <a href="/form-penelitian" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">Daftar Sekarang</a>
+            <a href="/form-penelitian" class="bg-[#0D2C54] text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">Daftar Sekarang</a>
         </div>
 
         <!-- KKN -->
-        <div class="bg-blue-900 text-white p-8 rounded-xl shadow-lg">
+        <div class="bg-[#0D2C54] text-white p-8 rounded-xl shadow-lg">
             <div class="flex items-center space-x-4 mb-4">
                 <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="white">

@@ -10,7 +10,7 @@
 
         <!-- LOGO -->
         <a href="index.php" class="flex items-center space-x-3">
-            <img src="/img/logo.png" alt="Logo" class="h-10">
+            <img src="{{ asset('img/logo1.png') }}" alt="Logo" class="h-10">
         </a>
 
         <!-- MENU DESKTOP -->
