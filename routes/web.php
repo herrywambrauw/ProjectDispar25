@@ -15,6 +15,10 @@ Route::get('detail-mou', function(){
     return view('landingpage.detail-mou');
 });
 
+Route::get('detail-pks', function(){
+    return view('landingpage.detail-pks');
+});
+
 Route::get('dokumentasi', function(){
     return view('landingpage.dokumentasi');
 });
