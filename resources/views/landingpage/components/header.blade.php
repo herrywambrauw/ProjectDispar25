@@ -5,7 +5,7 @@
 // Mobile-first: hamburger menu shows nav on small screens.
 
 ?>
-<header class="bg-blue-900 text-white shadow-md">
+<header class="bg-[#0D2C54] text-white shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         <!-- LOGO -->
@@ -34,7 +34,7 @@
             </a>
 
             @if (Route::has('register'))
-                <a href="{{ route('register.step1') }}" class="bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-600 text-sm">
+                <a href="{{ route('register.step1') }}" class="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-blue-900 text-sm">
                     Buat Akun
                 </a>
             @endif
@@ -71,7 +71,7 @@
                 </a>
 
                 @if (Route::has('register'))
-                    <a href="{{ route('register.step1') }}" class="block bg-blue-700 px-4 py-2 rounded-lg text-center mt-2">
+                    <a href="{{ route('register.step1') }}" class="block px-4 py-2 rounded-lg text-center mt-2">
                         Buat Akun
                     </a>
                 @endif

@@ -4,7 +4,7 @@
 // Usage: <?php include 'components/footer.php';
 
 ?>
-<footer class="bg-blue-900 text-white mt-16">
+<footer class="bg-[#0D2C54] text-white mt-16">
     <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
 
         <!-- LOGO & DESKRIPSI -->

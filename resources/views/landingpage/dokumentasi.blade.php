@@ -12,9 +12,11 @@
 <body class="bg-white text-gray-800">
 
 <!-- HERO -->
-<section class="bg-blue-900 py-16 text-center text-white">
-    <h1 class="text-3xl md:text-5xl font-bold">Dokumentasi Kegiatan</h1>
-    <p class="mt-2 text-blue-200">Kumpulan dokumentasi dari berbagai kegiatan DISPAR Bantul</p>
+<section class="bg-[#0D2C54] py-16 px-6 text-white">
+    <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl font-bold">Dokumentasi Kegiatan</h1>
+    <p class="text-sm mt-2">Kumpulan dokumentasi dari berbagai kegiatan DISPAR Bantul</p>
+    </div>
 </section>
 
 @php
@@ -62,24 +64,26 @@
 <section class="py-16 px-6">
     <div class="max-w-7xl mx-auto">
 
-        <h2 class="text-2xl font-bold text-blue-900 mb-6">
+        <h2 class="text-2xl font-bold md-6">
             Semua Dokumentasi
         </h2>
 
         <!-- GRID -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
             @foreach ($currentData as $index => $item)
-                <div class="bg-blue-100 text-blue-900 p-4 rounded-xl shadow-lg hover:shadow-xl transition block">
+                <div class="border rounded-xl shadow hover:shadow-md overflow-hidden transition bg-white">
 
                     <!-- Image -->
-                    <div class="rounded-lg overflow-hidden mb-4">
+                    <div class="h-40 flex justify-center items-center">
                         <img src="{{ asset($item['img']) }}"
-                             class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                             class="w-full h-full object-contain">
                     </div>
 
-                    <h3 class="text-lg font-bold">{{ $item['title'] }}</h3>
-
+                    <div class="bg-[#0D2C54] text-white px-4 py-3 flex justify-between">
+                        <div class="truncate text-sm font-medium">
+                        {{ $item['title'] }}</div>
+                    </div>
                 </div>
             @endforeach
 

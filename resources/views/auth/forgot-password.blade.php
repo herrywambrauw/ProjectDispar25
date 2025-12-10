@@ -46,7 +46,7 @@
                 <div class="max-w-sm mx-auto">
                     <button
                         type="submit"
-                        class="w-full bg-blue-900 text-white font-semibold py-2 px-4 rounded hover:bg-blue-800 transition duration-200"
+                        class="w-full bg-[#0D2C54] text-white font-semibold py-2 px-4 rounded hover:bg-blue-800 transition duration-200"
                     >
                         {{ __('Kirim Tautan Reset Password') }}
                     </button>
@@ -63,7 +63,7 @@
         </div>
 
         <!-- Right Side - Branding -->
-        <div class="w-1/2 bg-blue-900 flex flex-col items-center justify-center">
+        <div class="w-1/2 bg-[#0D2C54] flex flex-col items-center justify-center">
             <div class="text-center text-white">
                 <img src="/img/logo.png" alt="Logo" class="h-10 mb-4">
             </div>
