@@ -11,6 +11,10 @@ Route::get('pendaftaran', function (){
     return view('landingpage.pendaftaran');
 });
 
+Route::get('detail-mou', function(){
+    return view('landingpage.detail-mou');
+});
+
 Route::get('dokumentasi', function(){
     return view('landingpage.dokumentasi');
 });
