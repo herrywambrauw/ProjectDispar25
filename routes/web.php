@@ -55,14 +55,11 @@ Route::get('form-pkl', function(){
     return view('landingpage.form.form-pkl');
 });
 
-<<<<<<< HEAD
 Route::get('dashboard-magang', function(){
     return view('dashboard.peserta.magang.dashboard-magang');
 });
 
 // Step 1
-=======
->>>>>>> d322d338656270d5a6228e80cab744d7100e5df8
 Route::get('/register-step1', function () {
     return view('auth.register-step1');
 })->name('register.step1');

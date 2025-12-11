@@ -1,5 +1,5 @@
 <!-- FULL REBUILD SESUAI DESAIN GAMBAR -->
-<!-- Tailwind + Alpine.js Required -->
+<!-- Tailwind + Alpine.js riski Required -->
 <!DOCTYPE html>
 <html lang="id" x-data="{ sidebar:false, unggah:false }">
 <head>
