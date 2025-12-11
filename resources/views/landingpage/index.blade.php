@@ -118,27 +118,14 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
 });
 
  $dokumentasi = [
-        ["img" => "dokumentasi/dok1.jpg", "title" => "Sosialisasi Program Wisata"],
-        ["img" => "dokumentasi/dok2.jpg", "title" => "Pelatihan Pemandu Wisata"],
-        ["img" => "dokumentasi/dok3.jpg", "title" => "Kunjungan Lapangan Mahasiswa"],
-        ["img" => "dokumentasi/dok4.jpg", "title" => "Rapat Koordinasi Kerja Sama"],
-        ["img" => "dokumentasi/dok5.jpg", "title" => "Workshop Peningkatan SDM"],
-        ["img" => "dokumentasi/dok6.jpg", "title" => "Kegiatan Monitoring Lokasi"],
-        ["img" => "dokumentasi/dok1.jpg", "title" => "Penyuluhan Desa Wisata"],
-        ["img" => "dokumentasi/dok2.jpg", "title" => "Pembinaan Kelompok Sadar Wisata"],
-        ["img" => "dokumentasi/dok3.jpg", "title" => "Simulasi Layanan Pariwisata"],
-        ["img" => "dokumentasi/dok4.jpg", "title" => "Pameran Produk Kreatif"],
-        ["img" => "dokumentasi/dok5.jpg", "title" => "FGD Pengembangan Wisata"],
-        ["img" => "dokumentasi/dok6.jpg", "title" => "Kegiatan Survei Lokasi Wisata"],
-        ["img" => "dokumentasi/dok1.jpg", "title" => "Pelatihan Digitalisasi Wisata"],
-        ["img" => "dokumentasi/dok2.jpg", "title" => "Pembekalan Mahasiswa PKL"],
-        ["img" => "dokumentasi/dok3.jpg", "title" => "Kolaborasi Pariwisata Sekolah"],
-        ["img" => "dokumentasi/dok4.jpg", "title" => "Diskusi Pengembangan Kawasan"],
-        ["img" => "dokumentasi/dok5.jpg", "title" => "Workshop Pemandu Wisata Junior"],
-        ["img" => "dokumentasi/dok6.jpg", "title" => "Observasi Lapangan Pariwisata"],
+        ['id' => 1, "img" => "dokumentasi/dok1.jpg", "title" => "Sosialisasi Program Wisata"],
+        ['id' => 2, "img" => "dokumentasi/dok2.jpg", "title" => "Pelatihan Pemandu Wisata"],
+        ['id' => 3, "img" => "dokumentasi/dok3.jpg", "title" => "Kunjungan Lapangan Mahasiswa"],
+        ['id' => 4, "img" => "dokumentasi/dok5.jpg", "title" => "Kunjungan Lapangan Mahasiswa"],
+        ['id' => 5, "img" => "dokumentasi/dok5.jpg", "title" => "Kunjungan Lapangan Mahasiswa"],
     ];
 
-    $currentData = collect($dokumentasi)->take(3);
+    $currentData = collect($dokumentasi);
 @endphp
 
 <!DOCTYPE html>
@@ -217,7 +204,7 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
 
         <div class="flex justify-center mt-6">
             <a href="/mou" class="bg-[#0D2C54] text-white px-6 py-2 rounded-lg hover:bg-[#143B77] transition">
-                Jelajahi MOU
+                Jelajahi MoU
             </a>
         </div>
     </section>
@@ -480,8 +467,8 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
 
             <!-- Button -->
             <div class="mt-10">
-                <a href="/register"
-                class="inline-block bg-[#0D2C54] text-white px-8 py-3 rounded-full shadow hover:bg-[#0b2446] transition">
+                <a href="/pendaftaran"
+                class="bg-[#0D2C54] text-white px-6 py-2 rounded-lg hover:bg-[#143B77] transition">
                     Daftar Sekarang
                 </a>
             </div>
@@ -502,7 +489,8 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
             <!-- GRID -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-        @foreach ($currentData as $item)
+        @foreach ($currentData ->take(3) as $item)
+        {{-- <a href="/dokumentasi/{{ $item->id }}"> --}}
             <div class="border rounded-xl shadow hover:shadow-md overflow-hidden transition bg-white">
 
                 <!-- Image -->
@@ -526,7 +514,7 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
             <!-- Button -->
             <div class="mt-10">
                 <a href="/galeri"
-                class="inline-block bg-[#0D2C54] text-white px-8 py-3 rounded-full shadow hover:bg-[#0b2446] transition">
+                class="bg-[#0D2C54] text-white px-6 py-2 rounded-lg hover:bg-[#143B77] transition">
                     Lihat Selengkapnya
                 </a>
             </div>
