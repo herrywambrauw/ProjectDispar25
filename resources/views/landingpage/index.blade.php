@@ -155,13 +155,13 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
 <!-- HEADER SECTION -->
     <section
         class="relative w-full h-[420px] bg-cover bg-center flex items-center "
-        style="background-image: {{ asset('img/logo1.png') }};">
+        style="background-image: {{ asset('img/background.png') }};">
 
         <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
         <!-- Content -->
-        <div class="relative max-w-6xl mx-48 px-6 py-10 text-white">
+        <div class="relative max-w-6xl mx-64 px-6 py-10 text-white">
             <h1 class="text-3xl md:text-4xl font-bold leading-tight">
                 Dinas Pariwisata Kabupaten Bantul
             </h1>
@@ -171,7 +171,7 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
             </h2>
 
             <!-- Divider -->
-            <div class="w-126 h-[2px] bg-white mt-4 mb-4"></div>
+            <div class="w-128 h-[2px] bg-white mt-4 mb-4"></div>
 
             <p class="text-sm md:text-base leading-relaxed max-w-xl">
                 Sistem Informasi Monitoring dan Evaluasi Kerja Sama Pariwisata

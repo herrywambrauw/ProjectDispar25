@@ -32,15 +32,15 @@
 
                     <!-- Nama -->
                     <label class="block font-semibold mb-1">Nama Lengkap</label>
-                    <input type="text" name="nama" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Lengkap">
+                    <input type="text" name="nama" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Lengkap" required>
 
                     <!-- Email -->
                     <label class="block font-semibold mb-1">Email</label>
-                    <input type="email" name="email" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Email">
+                    <input type="email" name="email" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Email" required>
 
                     <!-- NIM / NIS -->
                     <label class="block font-semibold mb-1">NIM / NIS</label>
-                    <input type="text" name="nim" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="NIM / NIS">
+                    <input type="text" name="nim" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="NIM / NIS" required>
 
                     <!-- Jenis Kelamin -->
                     <label class="block font-semibold mb-1">Jenis Kelamin</label>
@@ -52,7 +52,7 @@
 
                     <!-- No HP -->
                     <label class="block font-semibold mb-1">No Handphone</label>
-                    <input type="text" name="nohp" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="No Handphone">
+                    <input type="text" name="nohp" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="No Handphone" required>
 
                 </div>
 
@@ -65,15 +65,11 @@
 
                     <!-- Asal Instansi -->
                     <label class="block font-semibold mb-1">Asal Instansi / Sekolah</label>
-                    <input type="text" name="instansi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Asal Instansi / Sekolah">
+                    <input type="text" name="instansi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Asal Instansi / Sekolah" required>
 
                     <!-- Prodi -->
                     <label class="block font-semibold mb-1">Prodi / Jurusan</label>
-                    <input type="text" name="prodi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Prodi / Jurusan">
-
-                    {{-- <!-- Fakultas -->
-                    <label class="block font-semibold mb-1">Fakultas (Jika Mahasiswa)</label>
-                    <input type="text" name="fakultas" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Fakultas"> --}}
+                    <input type="text" name="prodi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Prodi / Jurusan" required>
 
                     <!-- Nama Dosen / Pembimbing -->
                     <label class="block font-semibold mb-1">Nama Guru Pembimbing</label>
@@ -85,12 +81,12 @@
 
                     <!-- Tanggal Mulai -->
                     <label class="block font-semibold mb-1">Tanggal Mulai</label>
-                    <input type="date" name="tanggal_mulai" class="w-full border rounded-lg px-3 py-2 mb-4">
+                    <input type="date" name="tanggal_mulai" class="w-full border rounded-lg px-3 py-2 mb-4" required>
 
                     <!-- Upload Surat -->
                     <label class="block font-semibold mb-1">Unggah Surat Permohonan PKL (PDF)</label>
                     <input type="file" name="surat" accept="application/pdf"
-                           class="w-full border rounded-lg px-3 py-2 mb-4 bg-white">
+                           class="w-full border rounded-lg px-3 py-2 mb-4 bg-white" required>
 
                 </div>
             </div>

@@ -64,7 +64,7 @@
 <section class="py-16 px-6">
     <div class="max-w-7xl mx-auto">
 
-        <h2 class="text-2xl font-bold md-6">
+        <h2 class="text-2xl font-bold md-6 mb-6">
             Semua Dokumentasi
         </h2>
 
