@@ -24,7 +24,7 @@
                     </svg>
                 </div>
 
-                <h2 class="text-xl font-bold">Praktik Kerja Lapangan</h2>
+                <h2 class="text-xl font-bold">Praktik Kerja Lapangan (Sekolah)</h2>
             </div>
 
             <p class="text-sm opacity-90 mb-6">
@@ -44,7 +44,7 @@
                     </svg>
                 </div>
 
-                <h2 class="text-xl font-bold">Magang</h2>
+                <h2 class="text-xl font-bold">Magang (Perguruan Tinggi)</h2>
             </div>
 
             <p class="text-sm mb-6">

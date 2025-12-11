@@ -64,23 +64,23 @@
                     </div>
 
                     <!-- Asal Instansi -->
-                    <label class="block font-semibold mb-1">Asal Instansi</label>
-                    <input type="text" name="instansi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Asal Instansi">
+                    <label class="block font-semibold mb-1">Asal Instansi / Perguruan Tinggi</label>
+                    <input type="text" name="instansi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Asal Instansi / Perguruan Tinggi">
 
                     <!-- Prodi -->
                     <label class="block font-semibold mb-1">Prodi / Jurusan</label>
                     <input type="text" name="prodi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Prodi / Jurusan">
 
                     <!-- Fakultas -->
-                    <label class="block font-semibold mb-1">Fakultas (Jika Mahasiswa)</label>
+                    <label class="block font-semibold mb-1">Fakultas</label>
                     <input type="text" name="fakultas" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Fakultas">
 
                     <!-- Nama Dosen / Pembimbing -->
-                    <label class="block font-semibold mb-1">Nama Dosen / Guru Pembimbing</label>
-                    <input type="text" name="pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Dosen / Guru Pembimbing">
+                    <label class="block font-semibold mb-1">Nama Dosen Pembimbing</label>
+                    <input type="text" name="pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Dosen Pembimbing">
 
                     <!-- No HP Dosen -->
-                    <label class="block font-semibold mb-1">No. Handphone Dosen / Guru Pembimbing</label>
+                    <label class="block font-semibold mb-1">No. Handphone Dosen Pembimbing</label>
                     <input type="text" name="nohp_pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="No. HP Pembimbing">
 
                     <!-- Tanggal Mulai -->
