@@ -48,70 +48,60 @@
         ];
     @endphp
 
-    {{-- SIDEBAR --}}
-    <aside class="w-64 bg-[#1b4c85] text-white flex flex-col flex-shrink-0 transition-all duration-300 relative z-20">
-        <div class="h-24 flex items-center px-6 border-b border-white/10">
-            <div class="flex items-center gap-3">
-                <div class="bg-white text-[#1b4c85] p-1 rounded font-bold text-xl leading-none tracking-tighter">
-                    SME
-                </div>
-                <div class="font-bold text-2xl tracking-wide">SIMONE</div>
+    <aside class="w-72 bg-[#1b4c85] text-white flex flex-col flex-shrink-0 transition-all duration-300">
+        <div class="h-20 flex items-center px-8 border-b border-white/10">
+            <div class="flex items-center gap-2">
+                <div class="font-bold text-3xl tracking-wide italic">SIMONE</div>
             </div>
         </div>
 
-        <div class="p-4 overflow-y-auto flex-1">
-            <p class="text-xs text-blue-200 mb-4 font-medium px-4">Menu</p>
+        <div class="p-6">
+            <p class="text-xs text-blue-200 mb-4 font-medium">Menu</p>
             <nav class="space-y-2">
-                
-                {{-- Menu: Dashboard --}}
-                <a href="#" class="flex items-center gap-4 px-4 py-3 bg-[#163e6e] rounded-xl text-white shadow-inner relative group">
-                    <div class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-blue-400 rounded-r-md"></div>
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-                    <span class="font-medium text-sm">Dashboard</span>
+                <a href="#" class="flex items-center gap-4 px-4 py-3 bg-white/10 rounded-xl text-white shadow-sm border-l-4 border-blue-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    <span class="font-medium">Dashboard</span>
                 </a>
                 
-                {{-- Menu: Log Activity --}}
                 <a href="#" class="flex items-center gap-4 px-4 py-3 text-blue-100 hover:bg-white/5 rounded-xl transition">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <span class="font-medium text-sm">Log Activity</span>
+                    <span>Log Activity</span>
                 </a>
 
-                {{-- Menu: Upload (Dropdown style) --}}
                 <a href="#" class="flex items-center justify-between px-4 py-3 text-blue-100 hover:bg-white/5 rounded-xl transition group">
                     <div class="flex items-center gap-4">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
-                        <span class="font-medium text-sm">Upload</span>
+                        <span>Unggah</span>
                     </div>
-                    <svg class="w-4 h-4 transform transition group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-4 h-4 transform group-hover:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </a>
                 
-                {{-- Menu: Calender --}}
                 <a href="#" class="flex items-center gap-4 px-4 py-3 text-blue-100 hover:bg-white/5 rounded-xl transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    <span class="font-medium text-sm">Calender</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span>Kalender</span>
                 </a>
             </nav>
         </div>
     </aside>
 
-    {{-- MAIN CONTENT --}}
-    <main class="flex-1 flex flex-col min-w-0 bg-[#dbeafe]">
+    <main class="flex-1 flex flex-col min-w-0">
         
         <header class="h-20 bg-[#1b4c85] px-8 flex justify-between items-center shadow-md z-10">
-            <button class="p-2 rounded-lg bg-[#2d5d9b] text-white hover:bg-white/10">
+            <button class="p-2 rounded-lg border border-blue-400/30 text-white hover:bg-white/10">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
 
             <div class="flex items-center gap-4">
-                <div class="w-10 h-10 rounded-full border-2 border-white/20 overflow-hidden">
-                    <img src="https://ui-avatars.com/api/?name=Riski&background=random" alt="Profile" class="w-full h-full object-cover">
+                <div class="w-10 h-10 rounded-full border-2 border-blue-300 overflow-hidden bg-gray-200">
+                    <img src="https://ui-avatars.com/api/?name=Hanung&background=0D8ABC&color=fff" alt="Profile" class="w-full h-full object-cover">
                 </div>
-                <div class="text-white hidden sm:block">
-                    <div class="text-sm font-semibold">Riski</div>
+                <div class="text-right text-white hidden sm:block">
+                    <div class="text-sm font-semibold">Hanung</div>
                 </div>
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
         </header>
+
 
         <div class="flex-1 overflow-y-auto p-6 lg:p-8">
             
