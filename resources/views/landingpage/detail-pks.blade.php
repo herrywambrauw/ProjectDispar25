@@ -9,8 +9,8 @@
                         Informasi Universitas Teknologi Digital Indonesia (UTDI) Yogyakarta Tentang
                         Pelaksanaan Tri Dharma Pendidikan Tinggi Dalam Rangka Penembangan Sumberdaya
                         Pariwisata Dan Ekonomi Kreatif Kabupaten Bantul',
-        'nopks' => '43/PK/Bt/2025',
-        'nosuratpks' => 'L.05.3/103/UTDI/DK/VII/2025',
+        'nopkspihaksatu' => '43/PK/Bt/2025',
+        'nospkspihakdua' => 'L.05.3/103/UTDI/DK/VII/2025',
         'tanggal_mulai' => '31 Juli 2025',
         'tanggal_selesai' => '31 Juli 2030',
         'namapihaksatu' => 'Saryadi',
@@ -65,13 +65,13 @@
                     </div>
 
                     <div>
-                        <span class="font-semibold">Nomor PKS</span><br>
-                        {{ $pks->nopks }}
+                        <span class="font-semibold">Nomor PKS Pihak ke-1</span><br>
+                        {{ $pks->nopkspihaksatu }}
                     </div>
 
                     <div>
-                        <span class="font-semibold">Nomor Surat PKS</span><br>
-                        {{ $pks->nosuratpks }}
+                        <span class="font-semibold">Nomor PKS Pihak ke-2</span><br>
+                        {{ $pks->nopkspihakdua }}
                     </div>
 
                     <div>

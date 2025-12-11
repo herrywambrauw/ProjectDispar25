@@ -9,8 +9,8 @@
                         Kabupaten Bantul dan Sekolah Tinggi Manajemen Informatika
                         dan Komputeer (STMIK) Akakom Tentang Peningkatan dan pembangunan potensi sumber daya daerah
                         Kabupaten Bantul melalui kerja sama bidang pendidikan Penelitian, dan pengabdian kepada Masyarakat',
-        'nomou' => '24/Mou/Bt/2021',
-        'nosuratmou' => '034/SPK/STMIK AKAKOM-PEMKAB BANTUL/VI?2021',
+        'nomoupihaksatu' => '24/Mou/Bt/2021',
+        'nomoupihakdua' => '034/SPK/STMIK AKAKOM-PEMKAB BANTUL/VI?2021',
         'tanggal_mulai' => '29 Juli 2021',
         'tanggal_selesai' => '29 Juli 2026',
         'namapihaksatu' => 'Abdul Halim Muslih',
@@ -65,13 +65,13 @@
                     </div>
 
                     <div>
-                        <span class="font-semibold">Nomor MoU</span><br>
-                        {{ $mou->nomou }}
+                        <span class="font-semibold">Nomor MoU Pihak ke-1</span><br>
+                        {{ $mou->nomoupihaksatu }}
                     </div>
 
                     <div>
-                        <span class="font-semibold">Nomor Surat MoU</span><br>
-                        {{ $mou->nosuratmou }}
+                        <span class="font-semibold">Nomor  MoU Pihak ke-2</span><br>
+                        {{ $mou->nomoupihakdua }}
                     </div>
 
                     <div>
