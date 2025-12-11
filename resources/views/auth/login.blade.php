@@ -45,9 +45,9 @@
                         type="email"
                         name="email"
                         :value="old('email')"
-                        placeholder="{{ __('Email / Nama Pengguna') }}"
+                        placeholder="{{ __('Email') }}"
                         class="w-full max-w-sm mx-auto block px-4 py-2 border-2 border-gray-800 rounded text-gray-800
-                            placeholder-gray-600 focus:outline-none focus:border-blue-600 focus:ring-0"
+                            placeholder-gray-600 focus:outline-none focus:border-[#0D2C54] focus:ring-0"
                         required
                         autofocus
                         autocomplete="username"
@@ -62,7 +62,7 @@
                         name="password"
                         placeholder="{{ __('Kata Sandi') }}"
                         class="w-full max-w-sm mx-auto block px-4 py-2 border-2 border-gray-800 rounded text-gray-800
-                            placeholder-gray-600 focus:outline-none focus:border-blue-600 focus:ring-0"
+                            placeholder-gray-600 focus:outline-none focus:border-[#0D2C54] focus:ring-0"
                         required
                         autocomplete="current-password"
                     />
@@ -74,7 +74,7 @@
                         type="checkbox"
                         id="remember_me"
                         name="remember"
-                        class="w-5 h-5 border-2 border-gray-800 rounded accent-blue-700"
+                        class="w-5 h-5 border-2 border-gray-800 rounded accent-[#0D2C54]"
                     />
                     <label for="remember_me" class="ml-2 text-sm text-gray-700">
                         {{ __('Ingatkan Saya?') }}
@@ -85,7 +85,7 @@
                 <div class="max-w-sm mx-auto">
                     <button
                         type="submit"
-                        class="w-full bg-blue-900 text-white font-semibold py-2 px-4 rounded hover:bg-blue-800 transition duration-200"
+                        class="w-full bg-[#0D2C54] text-white font-semibold py-2 px-4 rounded hover:bg-blue-800 transition duration-200"
                     >
                         {{ __('Masuk') }}
                     </button>
@@ -111,7 +111,7 @@
         </div>
 
         <!-- Right Side - Branding -->
-        <div class="w-1/2 bg-blue-900 flex flex-col items-center justify-center">
+        <div class="w-1/2 bg-[#0D2C54] flex flex-col items-center justify-center">
             <div class="text-center">
                 <!-- SIMONE Logo -->
                 <div class="text-white mb-4">

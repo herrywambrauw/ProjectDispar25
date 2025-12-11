@@ -11,6 +11,26 @@ Route::get('pendaftaran', function (){
     return view('landingpage.pendaftaran');
 });
 
+Route::get('mou', function(){
+    return view('landingpage.mou');
+});
+
+Route::get('detail-mou', function(){
+    return view('landingpage.detail-mou');
+});
+
+Route::get('detail-pks', function(){
+    return view('landingpage.detail-pks');
+});
+
+Route::get('dokumentasi', function(){
+    return view('landingpage.dokumentasi');
+});
+
+Route::get('detail-dokumentasi', function(){
+    return view('landingpage.detail-dokumentasi');
+});
+
 Route::get('kerjasama', function(){
     return view('landingpage.kerjasama');
 });
@@ -35,18 +55,20 @@ Route::get('form-pkl', function(){
     return view('landingpage.form.form-pkl');
 });
 
+<<<<<<< HEAD
 Route::get('dashboard-magang', function(){
     return view('dashboard.peserta.magang.dashboard-magang');
 });
 
 // Step 1
+=======
+>>>>>>> d322d338656270d5a6228e80cab744d7100e5df8
 Route::get('/register-step1', function () {
     return view('auth.register-step1');
 })->name('register.step1');
 
 Route::post('/register-step1', [RegisteredUserController::class, 'storeStep1'])->name('register.step1.submit');
 
-// Step 2
 Route::get('/register-step2', function () {
     return view('auth.register-step2');
 })->name('register.step2');

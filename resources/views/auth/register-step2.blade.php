@@ -25,7 +25,7 @@
                     <a href="{{ route('register.step1') }}" class="px-6 py-2 bg-gray-100 text-gray-600">
                         Akun Login
                     </a>
-                    <div class="px-6 py-2 bg-blue-900 text-white font-semibold">
+                    <div class="px-6 py-2 bg-[#0D2C54] text-white font-semibold">
                         Data Pribadi
                     </div>
                 </div>
@@ -78,14 +78,14 @@
 
                 <!-- Submit -->
                 <button type="submit"
-                    class="w-full bg-blue-900 text-white font-semibold py-2 px-4 rounded hover:bg-blue-800 transition">
+                    class="w-full bg-[#0D2C54] text-white font-semibold py-2 px-4 rounded hover:bg-blue-800 transition">
                     Daftar Sekarang
                 </button>
             </form>
         </div>
 
         <!-- Right Side -->
-        <div class="w-1/2 bg-blue-900 flex flex-col items-center justify-center">
+        <div class="w-1/2 bg-[#0D2C54] flex flex-col items-center justify-center">
             <img src="/img/logo.png" alt="Logo" class="h-12 mb-4">
         </div>
     </div>

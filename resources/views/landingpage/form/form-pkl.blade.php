@@ -26,7 +26,7 @@
                 <!-- Bagian Kiri -->
                 <div class="bg-white p-6 rounded-xl shadow">
 
-                    <div class="text-center bg-blue-900 text-white py-2 rounded-lg mb-6 font-semibold">
+                    <div class="text-center bg-[#0D2C54] text-white py-2 rounded-lg mb-6 font-semibold">
                         Lengkapi Data Diri Anda
                     </div>
 
@@ -59,7 +59,7 @@
                 <!-- Bagian Kanan -->
                 <div class="bg-white p-6 rounded-xl shadow">
 
-                    <div class="text-center bg-blue-900 text-white py-2 rounded-lg mb-6 font-semibold">
+                    <div class="text-center bg-[#0D2C54] text-white py-2 rounded-lg mb-6 font-semibold">
                         Lengkapi Data Diri Instansi Anda
                     </div>
 
@@ -100,7 +100,7 @@
                     Kembali
                 </a>
 
-                <button type="submit" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                <button type="submit" class="px-6 py-2 bg-[#0D2C54] text-white rounded-lg hover:bg-blue-800">
                     Daftar
                 </button>
             </div>
