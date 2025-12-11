@@ -14,11 +14,26 @@
         </a>
 
         <!-- MENU DESKTOP -->
-<nav class="hidden md:flex space-x-6 text-sm font-medium">
-    <a href="#" class="hover:text-blue-200">Beranda</a>
-    <a href="#" class="hover:text-blue-200">Informasi Kerjasama</a>
-    <a href="#" class="hover:text-blue-200">Panduan Pendaftaran</a>
-    <a href="#" class="hover:text-blue-200">Galeri Kegiatan</a>
+<nav class="hidden md:flex space-x-6 text-sm font-medium z-50">
+    <a href="/" class="hover:text-blue-200">Beranda</a>
+            <div class="relative inline-block">
+            <button onclick="toggleDropdown()" class="flex items-center hover:text-blue-200">
+                Informasi Kerjasama
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+
+            <div id="dropdown"
+                class="absolute left-0 mt-2 w-40 bg-[#0D2C54] text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+                <a href="/mou" class="block px-4 py-2 hover:bg-[#143769]">MoU</a>
+                <a href="/pks" class="block px-4 py-2 hover:bg-[#143769]">PKS</a>
+            </div>
+        </div>
+
+    <a href="/pendaftaran" class="hover:text-blue-200">Pendaftaran</a>
+    <a href="/dokumentasi" class="hover:text-blue-200">Galeri Kegiatan</a>
 </nav>
 
 @if (Route::has('login'))
@@ -53,11 +68,26 @@
 </div> <!-- pastikan ini adalah penutup container utama header Anda -->
 
 <!-- MOBILE MENU -->
-<div id="mobile-menu" class="hidden bg-blue-800 md:hidden px-6 pb-4 space-y-3">
-    <a href="#" class="block py-2 border-b border-white/20">Beranda</a>
-    <a href="#" class="block py-2 border-b border-white/20">Informasi Kerjasama</a>
-    <a href="#" class="block py-2 border-b border-white/20">Panduan Pendaftaran</a>
-    <a href="#" class="block py-2 border-b border-white/20">Galeri Kegiatan</a>
+<div id="mobile-menu" class="hidden bg-[#0D2C54] md:hidden px-6 pb-4 space-y-3">
+    <a href="/" class="block py-2 border-b border-white/20">Beranda</a>
+    <div class="relative inline-block">
+        <button onclick="toggleDropdownMobile()" class="flex items-center hover:text-blue-200">
+            Informasi Kerjasama
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <div id="dropdownMobile"
+            class="absolute left-0 mt-2 w-40 bg-[#0D2C54] text-white rounded-md shadow-lg
+            opacity-0 invisible transition duration-200">
+            <a href="/mou" class="block px-4 py-2 hover:bg-[#143769]">MoU</a>
+            <a href="/pks" class="block px-4 py-2 hover:bg-[#143769]">PKS</a>
+        </div>
+    </div>
+    <a href="/pendaftaran" class="block py-2 border-b border-white/20">Panduan Pendaftaran</a>
+    <a href="/dokumentasi" class="block py-2 border-b border-white/20">Galeri Kegiatan</a>
 
     @if (Route::has('login'))
         <div class="pt-2">
@@ -71,7 +101,7 @@
                 </a>
 
                 @if (Route::has('register'))
-                    <a href="{{ route('register.step1') }}" class="block px-4 py-2 rounded-lg text-center mt-2">
+                    <a href="{{ route('register.step1') }}" class="block border border-white px-4 py-2 rounded-lg text-center mt-2">
                         Buat Akun
                     </a>
                 @endif
@@ -85,6 +115,23 @@
 document.getElementById("menu-btn").onclick = function () {
     document.getElementById("mobile-menu").classList.toggle("hidden");
 };
+
+function toggleDropdown() {
+        const menu = document.getElementById('dropdown');
+        menu.classList.toggle('opacity-100');
+        menu.classList.toggle('visible');
+        menu.classList.toggle('opacity-0');
+        menu.classList.toggle('invisible');
+    }
+
+function toggleDropdownMobile() {
+    const menu = document.getElementById('dropdownMobile');
+    menu.classList.toggle('opacity-100');
+    menu.classList.toggle('visible');
+    menu.classList.toggle('opacity-0');
+    menu.classList.toggle('invisible');
+}
+
 </script>
 </body>
 </html>

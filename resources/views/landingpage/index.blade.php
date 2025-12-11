@@ -175,15 +175,13 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
 
             <p class="text-sm md:text-base leading-relaxed max-w-xl">
                 Sistem Informasi Monitoring dan Evaluasi Kerja Sama Pariwisata
-                {{-- dan pendaftaran kerja sama seperti Penelitian,
-                KKN, Magang, dan Praktek Kerja Lapangan. --}}
             </p>
         </div>
     </section>
 
 
     <!-- SECTION MOU -->
-    <section class="max-w-6xl mx-auto px-6 py-10">
+    <section id="kerjasama" class="max-w-6xl mx-auto px-6 py-10">
         <h2 class="text-center text-[#0D2C54] text-5xl font-bold mb-12 tracking-wide">KERJA SAMA</h2>
         <h3 class="text-center text-[#0D2C54] text-2xl font-bold mb-6">Memorandum of Understanding</h3>
 
