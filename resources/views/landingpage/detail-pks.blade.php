@@ -10,7 +10,7 @@
                         Pelaksanaan Tri Dharma Pendidikan Tinggi Dalam Rangka Penembangan Sumberdaya
                         Pariwisata Dan Ekonomi Kreatif Kabupaten Bantul',
         'nopkspihaksatu' => '43/PK/Bt/2025',
-        'nospkspihakdua' => 'L.05.3/103/UTDI/DK/VII/2025',
+        'nopkspihakdua' => 'L.05.3/103/UTDI/DK/VII/2025',
         'tanggal_mulai' => '31 Juli 2025',
         'tanggal_selesai' => '31 Juli 2030',
         'namapihaksatu' => 'Saryadi',

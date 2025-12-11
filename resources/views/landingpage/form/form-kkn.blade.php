@@ -77,7 +77,7 @@
 
                     <!-- Nama Dosen / Pembimbing -->
                     <label class="block font-semibold mb-1">Nama Dosen Pembimbing</label>
-                    <input type="text" name="pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Dosen / Guru Pembimbing">
+                    <input type="text" name="pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Dosen Pembimbing">
 
                     <!-- No HP Dosen -->
                     <label class="block font-semibold mb-1">No. Handphone Dosen Pembimbing</label>

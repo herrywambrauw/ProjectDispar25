@@ -54,6 +54,14 @@
                     <label class="block font-semibold mb-1">No Handphone</label>
                     <input type="text" name="nohp" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="No Handphone">
 
+                    <!-- Judul -->
+                    <label class="block font-semibold mb-1">Judul Penelitian</label>
+                    <input type="text" name="judul" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Judul Penelitian">
+
+                    <!-- Keterangan -->
+                    <label class="block font-semibold mb-1">Keterangan</label>
+                    <input type="text" name="Keterangan" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Keterangan">
+
                 </div>
 
                 <!-- Bagian Kanan -->
@@ -64,23 +72,23 @@
                     </div>
 
                     <!-- Asal Instansi -->
-                    <label class="block font-semibold mb-1">Asal Instansi (Jika Mahasiswa)</label>
+                    <label class="block font-semibold mb-1">Asal Instansi</label>
                     <input type="text" name="instansi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Asal Instansi">
 
                     <!-- Prodi -->
-                    <label class="block font-semibold mb-1">Prodi / Jurusan (Jika Mahasiswa)</label>
+                    <label class="block font-semibold mb-1">Prodi / Jurusan</label>
                     <input type="text" name="prodi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Prodi / Jurusan">
 
                     <!-- Fakultas -->
-                    <label class="block font-semibold mb-1">Fakultas (Jika Mahasiswa)</label>
+                    <label class="block font-semibold mb-1">Fakultas</label>
                     <input type="text" name="fakultas" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Fakultas">
 
                     <!-- Nama Dosen / Pembimbing -->
-                    <label class="block font-semibold mb-1">Nama Dosen Pembimbing (Jika Mahasiswa)</label>
-                    <input type="text" name="pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Dosen / Guru Pembimbing">
+                    <label class="block font-semibold mb-1">Nama Pembimbing</label>
+                    <input type="text" name="pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Pembimbing">
 
                     <!-- No HP Dosen -->
-                    <label class="block font-semibold mb-1">No. Handphone Dosen Pembimbing (Jika Mahasiswa)</label>
+                    <label class="block font-semibold mb-1">No. Handphone Pembimbing</label>
                     <input type="text" name="nohp_pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="No. HP Pembimbing">
 
                     <!-- Tanggal Mulai -->

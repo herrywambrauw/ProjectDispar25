@@ -64,23 +64,23 @@
                     </div>
 
                     <!-- Asal Instansi -->
-                    <label class="block font-semibold mb-1">Asal Instansi</label>
-                    <input type="text" name="instansi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Asal Instansi">
+                    <label class="block font-semibold mb-1">Asal Instansi / Sekolah</label>
+                    <input type="text" name="instansi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Asal Instansi / Sekolah">
 
                     <!-- Prodi -->
                     <label class="block font-semibold mb-1">Prodi / Jurusan</label>
                     <input type="text" name="prodi" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Prodi / Jurusan">
 
-                    <!-- Fakultas -->
+                    {{-- <!-- Fakultas -->
                     <label class="block font-semibold mb-1">Fakultas (Jika Mahasiswa)</label>
-                    <input type="text" name="fakultas" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Fakultas">
+                    <input type="text" name="fakultas" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Fakultas"> --}}
 
                     <!-- Nama Dosen / Pembimbing -->
-                    <label class="block font-semibold mb-1">Nama Dosen / Guru Pembimbing</label>
-                    <input type="text" name="pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Dosen / Guru Pembimbing">
+                    <label class="block font-semibold mb-1">Nama Guru Pembimbing</label>
+                    <input type="text" name="pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="Nama Guru Pembimbing">
 
                     <!-- No HP Dosen -->
-                    <label class="block font-semibold mb-1">No. Handphone Dosen / Guru Pembimbing</label>
+                    <label class="block font-semibold mb-1">No. Handphone Guru Pembimbing</label>
                     <input type="text" name="nohp_pembimbing" class="w-full border rounded-lg px-3 py-2 mb-4" placeholder="No. HP Pembimbing">
 
                     <!-- Tanggal Mulai -->

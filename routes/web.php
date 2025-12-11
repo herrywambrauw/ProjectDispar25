@@ -4,8 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
 
 Route::get('/', function () {
-    return view('index');
+    return view('landingpage.index');
 });
+
+// Route::get('utama', function (){
+//     return view('landingpage.index');
+// });
 
 Route::get('pendaftaran', function (){
     return view('landingpage.pendaftaran');
