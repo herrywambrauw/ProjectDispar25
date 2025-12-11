@@ -20,11 +20,11 @@
     @php
         // Data Dummy MoU
         $mouBerjalan = array_fill(0, 5, ['nama' => 'UTDI', 'status' => 'Berjalan']);
-        $mouBerakhir = array_fill(0, 5, ['nama' => 'UTDI', 'status' => 'Berjalan']); // Di gambar status textnya tetap 'Berjalan' walau judulnya berakhir, kita samakan dulu
+        $mouBerakhir = array_fill(0, 5, ['nama' => 'UTDI', 'status' => 'Berakhir']); // Di gambar status textnya tetap 'Berjalan' walau judulnya berakhir, kita samakan dulu
 
         // Data Dummy PKS
         $pksBerjalan = array_fill(0, 5, ['nama' => 'UTDI', 'status' => 'Berjalan']);
-        $pksBerakhir = array_fill(0, 5, ['nama' => 'UTDI', 'status' => 'Berjalan']);
+        $pksBerakhir = array_fill(0, 5, ['nama' => 'UTDI', 'status' => 'Berakhir']);
 
         // Data Dummy Galeri (Placeholder Image)
         $galeri = [
@@ -78,11 +78,11 @@
             </button>
 
             <div class="flex items-center gap-4">
-                <div class="text-right text-white hidden sm:block">
-                    <div class="text-sm font-semibold">Hanung</div>
-                </div>
                 <div class="w-10 h-10 rounded-full border-2 border-blue-300 overflow-hidden bg-gray-200">
                     <img src="https://ui-avatars.com/api/?name=Hanung&background=0D8ABC&color=fff" alt="Profile" class="w-full h-full object-cover">
+                </div>
+                <div class="text-right text-white hidden sm:block">
+                    <div class="text-sm font-semibold">Hanung</div>
                 </div>
                 <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
@@ -90,9 +90,9 @@
 
         <div class="flex-1 overflow-y-auto p-6 lg:p-8">
             
-            <div class="grid grid-cols-12 gap-6 h-full">
+            <div class="grid grid-cols-12 gap-6">
                 
-                <div class="col-span-12 xl:col-span-3 bg-white rounded-[2rem] p-4 flex flex-col gap-4 shadow-sm h-fit xl:h-auto">
+                <div class="col-span-12 xl:col-span-3 flex flex-col gap-6">
                     
                     <div class="bg-[#4fc3f7] rounded-[2rem] p-6 text-white relative overflow-hidden h-44 flex flex-col justify-center shadow-md group hover:scale-[1.02] transition-transform">
                         <div class="absolute top-4 left-4 opacity-40">
@@ -110,7 +110,7 @@
                         </div>
                         <div class="relative z-10 pl-2">
                             <p class="text-lg font-medium opacity-90">Hari</p>
-                            <h2 class="text-3xl font-bold mt-1">Senin</h2> 
+                            <h2 class="text-3xl font-bold mt-1" id="current-day-time"></h2> 
                             <p class="text-[10px] mt-2 leading-tight opacity-70 max-w-[150px]">Semangat berkegiatan di Dinas Pariwisata Kabupaten Bantul</p>
                         </div>
                     </div>
@@ -134,7 +134,6 @@
                         
                         <div class="bg-[#1b4c85] rounded-3xl p-5 text-white shadow-lg flex flex-col h-full">
                             <div class="flex items-center gap-3 mb-4 opacity-80">
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                                 <h3 class="text-xl font-bold">MoU Berjalan</h3>
                             </div>
                             <div class="space-y-2 flex-1">
@@ -149,7 +148,6 @@
 
                         <div class="bg-[#2d5d9b] rounded-3xl p-5 text-white shadow-lg flex flex-col h-full">
                             <div class="flex items-center gap-3 mb-4 opacity-80">
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                                 <h3 class="text-xl font-bold">MoU Berakhir</h3>
                             </div>
                             <div class="space-y-2 flex-1">
@@ -168,7 +166,6 @@
                         
                          <div class="bg-[#4fc3f7] rounded-3xl p-5 text-white shadow-lg flex flex-col h-full">
                             <div class="flex items-center gap-3 mb-4 opacity-80">
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
                                 <h3 class="text-xl font-bold">PKS Berjalan</h3>
                             </div>
                             <div class="space-y-2 flex-1">
@@ -183,7 +180,6 @@
 
                          <div class="bg-[#4fc3f7] rounded-3xl p-5 text-white shadow-lg flex flex-col h-full">
                             <div class="flex items-center gap-3 mb-4 opacity-80">
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
                                 <h3 class="text-xl font-bold">PKS Berakhir</h3>
                             </div>
                             <div class="space-y-2 flex-1">
@@ -202,7 +198,6 @@
                 <div class="col-span-12 xl:col-span-3 h-full">
                     <div class="bg-[#4fc3f7] rounded-3xl p-6 text-white shadow-lg h-full flex flex-col">
                         <div class="flex items-start gap-4 mb-6">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                             <div>
                                 <h3 class="text-2xl font-bold leading-tight">Galeri <br>Kegiatan</h3>
                             </div>
@@ -246,6 +241,31 @@
         }
         setInterval(updateClock, 1000);
         updateClock(); // Run immediately
+
+        function updateLiveDateAndDay() {
+            const dateNow = new Date();
+            // Options to format the date and get the full weekday name
+            const options = { 
+                weekday: 'long', 
+                // year: 'numeric', 
+                // month: 'long', 
+                // day: 'numeric' 
+            };
+            
+            // Get the current day and date string based on user's local settings
+            const dayAndDateString = dateNow.toLocaleDateString(undefined, options);
+            const timeString = dateNow.toLocaleTimeString();
+
+            // Inject the string into the HTML element with the ID 'current-day-time'
+            document.getElementById('current-day-time').innerHTML = `${dayAndDateString}`;
+            
+        }
+
+        // Run the function immediately when the page loads
+        updateLiveDateAndDay();
+
+        // Update the time every second (1000 milliseconds) for a "real-time" effect
+        setInterval(updateLiveDateAndDay, 1000);
     </script>
 </body>
 </html>
