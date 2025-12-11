@@ -76,7 +76,9 @@ Route::get('/register-step2', function () {
 
 Route::post('/register-step2', [RegisteredUserController::class, 'storeStep2'])->name('register.step2.submit');
 
-
+Route::get('dashboard-pemasaran', function(){
+    return view('dashboard.pemasaran.dashboard-pemasaran');
+});
 
 Route::middleware([
     'auth:sanctum',
