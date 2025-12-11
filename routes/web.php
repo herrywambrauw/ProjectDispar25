@@ -35,6 +35,10 @@ Route::get('form-pkl', function(){
     return view('landingpage.form.form-pkl');
 });
 
+Route::get('dashboard-magang', function(){
+    return view('dashboard.peserta.magang.dashboard-magang');
+});
+
 // Step 1
 Route::get('/register-step1', function () {
     return view('auth.register-step1');
