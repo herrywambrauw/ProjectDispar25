@@ -490,8 +490,8 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
         @foreach ($currentData ->take(3) as $item)
-        {{-- <a href="/dokumentasi/{{ $item->id }}"> --}}
-            <div class="border rounded-xl shadow hover:shadow-md overflow-hidden transition bg-white">
+        <a href="{{ route('detail-dokumentasi', $item['id']) }}"
+            class="border rounded-xl shadow hover:shadow-md overflow-hidden transition bg-white">
 
                 <!-- Image -->
                 <div class="h-40 flex justify-center items-center">
@@ -505,8 +505,7 @@ $filtered = collect($pksList)->filter(function($item) use ($today, $filter) {
                         {{ $item['title'] }}
                     </div>
                 </div>
-
-            </div>
+            </a>
         @endforeach
 
     </div>
