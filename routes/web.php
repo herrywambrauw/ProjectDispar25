@@ -27,21 +27,17 @@ Route::get('pks', function(){
     return view('landingpage.pks');
 });
 
-Route::get('detail-pks', function(){
-    return view('landingpage.detail-pks');
-});
+Route::get('/detail-pks/{id}', function ($id) {
+    return view('landingpage.detail-pks', compact('id'));
+})->name('detail-pks');
 
 Route::get('dokumentasi', function(){
     return view('landingpage.dokumentasi');
 });
 
-Route::get('detail-dokumentasi', function(){
-    return view('landingpage.detail-dokumentasi');
-});
-
-Route::get('kerjasama', function(){
-    return view('landingpage.kerjasama');
-});
+Route::get('/detail-dokumentasi/{id}', function ($id) {
+    return view('landingpage.detail-dokumentasi', compact('id'));
+})->name('detail-dokumentasi');
 
 Route::get('dashboard-admin', function(){
     return view('dashboard.admin.dashboard-admin');

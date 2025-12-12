@@ -29,14 +29,14 @@
                 </a>
 
                 <!-- Instagram -->
-                <a href="#" class="hover:opacity-80">
+                <a href="https://www.instagram.com/jelajahbantul.id/" class="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="white" viewBox="0 0 24 24">
                         <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm6.6-.3a1.2 1.2 0 11-2.3 0 1.2 1.2 0 012.3 0z"/>
                     </svg>
                 </a>
 
                 <!-- YouTube -->
-                <a href="#" class="hover:opacity-80">
+                <a href="https://www.youtube.com/c/PariwisataBantul" class="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="white" viewBox="0 0 24 24">
                         <path d="M21.8 8s-.2-1.5-.8-2.2c-.7-.8-1.5-.8-1.9-.9C16.6 4.5 12 4.5 12 4.5h-.1s-4.6 0-7.1.4c-.4.1-1.2.1-1.9.9C2.3 6.5 2.2 8 2.2 8S2 9.7 2 11.5v1c0 1.8.2 3.5.2 3.5s.2 1.5.8 2.2c.7.8 1.7.8 2.1.9 1.5.2 6.9.4 6.9.4s4.6 0 7.1-.4c.4-.1 1.2-.1 1.9-.9.6-.7.8-2.2.8-2.2s.2-1.8.2-3.5v-1c0-1.8-.2-3.5-.2-3.5zM10 15.3V8.7l6 3.3-6 3.3z"/>
                     </svg>
