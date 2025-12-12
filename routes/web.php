@@ -63,9 +63,15 @@ Route::get('form-pkl', function(){
     return view('landingpage.form.form-pkl');
 });
 
+// Dashboard Peserta Magang
 Route::get('dashboard-magang', function(){
     return view('dashboard.peserta.magang.dashboard-magang');
 });
+
+Route::get('log-aktivitas', function(){
+    return view('dashboard.peserta.magang.log-aktivitas');
+});
+
 
 // Step 1
 Route::get('/register-step1', function () {
