@@ -73,6 +73,15 @@ Route::get('log-aktivitas', function(){
 });
 
 
+Route::get('sidebar', function(){
+    return view('dashboard.peserta.magang.components.sidebar');
+});
+
+Route::get('header', function(){
+    return view('dashboard.peserta.magang.components.header');
+});
+
+
 // Step 1
 Route::get('/register-step1', function () {
     return view('auth.register-step1');
