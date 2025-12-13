@@ -59,7 +59,11 @@ Route::get('form-pkl', function(){
     return view('landingpage.form.form-pkl');
 });
 
-// Dashboard Peserta Magang
+
+
+
+// Dashboard Peserta Magang 
+
 Route::get('dashboard-magang', function(){
     return view('dashboard.peserta.magang.dashboard-magang');
 });
@@ -68,14 +72,17 @@ Route::get('log-aktivitas', function(){
     return view('dashboard.peserta.magang.log-aktivitas');
 });
 
-
-Route::get('sidebar', function(){
-    return view('dashboard.peserta.magang.components.sidebar');
+Route::get('unggah-laporan', function(){
+    return view('dashboard.peserta.magang.unggah-laporan');
 });
 
-Route::get('header', function(){
-    return view('dashboard.peserta.magang.components.header');
+Route::get('unggah-kegiatan', function(){
+    return view('dashboard.peserta.magang.unggah-kegiatan');
 });
+//Batas Pendaftaran 
+
+
+
 
 
 // Step 1
