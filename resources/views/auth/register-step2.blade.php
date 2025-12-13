@@ -31,6 +31,12 @@
                 </div>
             </div>
 
+            @if(session('success'))
+                <div class="mb-4 p-3 bg-green-100 text-green-700 rounded">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             <!-- Form Step 2 -->
             <form method="POST" action="{{ route('register.step2.submit') }}" class="space-y-4 w-full max-w-sm mx-auto">
                 @csrf
@@ -51,8 +57,8 @@
                 <select name="jenis_kelamin" class="w-full px-4 py-2 border-2 border-gray-800 rounded focus:outline-none
                 focus:border-blue-600" required>
                     <option value="">Pilih Jenis Kelamin</option>
-                    <option>Laki-laki</option>
-                    <option>Perempuan</option>
+                    <option value="L">Laki-laki</option>
+                    <option value="P">Perempuan</option>
                 </select>
 
                 <!-- Tempat Lahir -->
@@ -84,7 +90,32 @@
             </form>
         </div>
 
-        <!-- Right Side -->
+            @if(session('preview_data'))
+                <div class="mt-8 p-4 border-2 border-dashed border-gray-400 rounded bg-gray-50">
+                    <h2 class="font-bold mb-3">Preview Alur Data (Belum Disimpan)</h2>
+
+                    <ul class="text-sm space-y-1">
+                        @foreach(session('preview_data') as $key => $value)
+                            @if(!in_array($key, ['password', 'password_confirmation']))
+                                <li><b>{{ $key }}:</b> {{ $value }}</li>
+                            @endif
+                        @endforeach
+                    </ul>
+
+                    <form method="POST" action="{{ route('register.confirm') }}" class="mt-4">
+                        @csrf
+                        <button class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+                            Simpan & Daftar
+                        </button>
+                    </form>
+
+                    <p class="text-xs text-red-600 mt-2">
+                        Data belum tersimpan ke database
+                    </p>
+                </div>
+            @endif
+
+
         <div class="w-1/2 bg-[#0D2C54] flex flex-col items-center justify-center">
             <img src="/img/logo.png" alt="Logo" class="h-12 mb-4">
         </div>

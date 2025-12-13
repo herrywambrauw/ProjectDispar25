@@ -14,20 +14,22 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input)
     {
         Validator::make($input, [
+            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'unique:users,email'],
             'username' => ['required', 'string', 'max:255', 'unique:users,username'],
             'password' => $this->passwordRules(),
 
-            'nama_lengkap' => ['required', 'string', 'max:255'],
-            'nik' => ['required', 'string', 'max:20'],
-            'jenis_kelamin' => ['required', 'string'],
+            'nama_lengkap' => ['required', 'string'],
+            'nik' => ['required', 'string'],
+            'jenis_kelamin' => ['required', 'in:L,P'],
             'tempat_lahir' => ['required', 'string'],
             'tanggal_lahir' => ['required', 'date'],
-            'no_hp' => ['required', 'string', 'max:20'],
+            'no_hp' => ['required', 'string'],
             'alamat' => ['required', 'string'],
         ])->validate();
 
         return User::create([
+            'name' => $input['name'],
             'email' => $input['email'],
             'username' => $input['username'],
             'password' => Hash::make($input['password']),
@@ -39,6 +41,8 @@ class CreateNewUser implements CreatesNewUsers
             'tanggal_lahir' => $input['tanggal_lahir'],
             'no_hp' => $input['no_hp'],
             'alamat' => $input['alamat'],
+
+            'role' => 'pendaftar',
         ]);
     }
 }
