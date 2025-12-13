@@ -85,18 +85,32 @@ Route::get('unggah-kegiatan', function(){
 
 
 
-// Step 1
+
+// ini khusus pendaftaran yh
 Route::get('/register-step1', function () {
     return view('auth.register-step1');
 })->name('register.step1');
 
-Route::post('/register-step1', [RegisteredUserController::class, 'storeStep1'])->name('register.step1.submit');
+Route::post('/register-step1', [RegisteredUserController::class, 'storeStep1'])
+    ->name('register.step1.submit');
 
 Route::get('/register-step2', function () {
+    if (!session()->has('register_step1')) {
+        return redirect()->route('register.step1');
+    }
     return view('auth.register-step2');
 })->name('register.step2');
 
-Route::post('/register-step2', [RegisteredUserController::class, 'storeStep2'])->name('register.step2.submit');
+Route::post('/register-step2', [RegisteredUserController::class, 'storeStep2'])
+    ->name('register.step2.submit');
+
+Route::post('/register-confirm', [RegisteredUserController::class, 'confirmRegister'])
+    ->name('register.confirm');
+
+
+
+
+
 
 Route::get('dashboard-pemasaran', function(){
     return view('dashboard.pemasaran.dashboard-pemasaran');

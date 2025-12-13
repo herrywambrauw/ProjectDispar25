@@ -28,8 +28,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-
-        // Tambahkan kolom baru sesuai database Anda:
         'role',
         'username',
         'nama_lengkap',
