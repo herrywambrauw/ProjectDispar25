@@ -79,6 +79,11 @@ Route::get('unggah-laporan', function(){
 Route::get('unggah-kegiatan', function(){
     return view('dashboard.peserta.magang.unggah-kegiatan');
 });
+
+Route::get('profil-pengguna', function(){
+    return view('dashboard.peserta.magang.profil-pengguna');
+});
+
 //Batas Pendaftaran 
 
 

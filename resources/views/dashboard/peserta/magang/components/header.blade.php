@@ -34,7 +34,7 @@
                 </div>
                 
                 {{-- Menu Profil --}}
-                <a href="/profile" class="flex items-center gap-4 px-4 py-3 text-white hover:bg-white/10 rounded-xl transition">
+                <a href="profil-pengguna" class="flex items-center gap-4 px-4 py-3 text-white hover:bg-white/10 rounded-xl transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     <span>Profil Pengguna</span>
                 </a>
