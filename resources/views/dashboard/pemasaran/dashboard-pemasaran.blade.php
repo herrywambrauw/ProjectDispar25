@@ -56,7 +56,7 @@
 
                 <a href="#" class="flex items-center justify-between px-4 py-3 text-blue-100 hover:bg-white/5 rounded-xl transition group">
                     <div class="flex items-center gap-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                         <span>Manajemen Kerjasama</span>
                     </div>
                     <svg class="w-4 h-4 transform group-hover:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -154,7 +154,7 @@
                                 @foreach($mouBerakhir as $item)
                                 <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex justify-between items-center hover:bg-white/30 transition">
                                     <span class="text-sm font-semibold tracking-wide">{{ $item['nama'] }}</span>
-                                    <span class="bg-red-500 text-[10px] font-bold px-3 py-1 rounded-full text-white shadow-sm uppercase">Berjalan</span>
+                                    <span class="bg-red-500 text-[10px] font-bold px-3 py-1 rounded-full text-white shadow-sm uppercase">Berakhir</span>
                                 </div>
                                 @endforeach
                             </div>
@@ -186,7 +186,7 @@
                                 @foreach($pksBerakhir as $item)
                                 <div class="bg-white/30 backdrop-blur-sm rounded-lg px-4 py-2 flex justify-between items-center hover:bg-white/40 transition">
                                     <span class="text-sm font-semibold tracking-wide">{{ $item['nama'] }}</span>
-                                    <span class="bg-red-500 text-[10px] font-bold px-3 py-1 rounded-full text-white shadow-sm uppercase">Berjalan</span>
+                                    <span class="bg-red-500 text-[10px] font-bold px-3 py-1 rounded-full text-white shadow-sm uppercase">Berakhir</span>
                                 </div>
                                 @endforeach
                             </div>
