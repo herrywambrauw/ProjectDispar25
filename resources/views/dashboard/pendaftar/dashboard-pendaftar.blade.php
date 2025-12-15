@@ -28,10 +28,7 @@
 
     {{-- SETUP DATA DUMMY DIPINDAHKAN KE SINI (Atau di Controller/View Composer jika di Laravel) --}}
     @php
-        $users = ['nama' => 'emeh'];
-        $dokumentasi = [['judul' => 'File_YangDiUpload.img', 'status' => 'Diterima']];
-        $laporan_pkl = [['judul' => 'Laporan_Mingguan.PDF']];
-        // $log_activity_pkl = [['tanggal_upload' => 'Wednesday, 10 August 2025']];
+
     @endphp
 
     {{-- MEMANGGIL KOMPONEN SIDEBAR DARI FOLDER 'components'
@@ -89,45 +86,11 @@
 
                 </div>
 
-                {{-- KOLOM TENGAH (Unggahan Aktivitas & Laporan) --}}
+                {{-- KOLOM TENGAH ) --}}
                 <div class="col-span-12 xl:col-span-5 flex flex-col gap-6">
 
-                    {{-- Card: Baru Saja Diunggah (Aktivitas) --}}
-                    <div class="bg-[#1b4c85] rounded-[2rem] p-6 text-white shadow-lg flex-1">
-                        <h3 class="text-xl font-bold mb-4 ml-1">Baru saja diunggah</h3>
 
-                        <div class="bg-[#153a66] rounded-xl p-5 shadow-inner">
-                            <h4 class="text-sm text-blue-200 mb-3 font-medium">Unggah Aktivitas</h4>
-                            <div class="space-y-3">
-                                @foreach($dokumentasi as $ua)
-                                <div class="flex justify-between items-center group cursor-pointer">
-                                    <span class="text-sm font-light text-blue-50 group-hover:text-white transition">{{ $ua['judul'] }}</span>
-                                    @if($ua['status'] == 'Diterima')
-                                        <span class="bg-[#4ade80] text-[#064e3b] text-[10px] font-bold px-4 py-1 rounded-full shadow-sm">Diterima</span>
-                                    @else
-                                        <span class="bg-[#fbbf24] text-[#78350f] text-[10px] font-bold px-4 py-1 rounded-full shadow-sm">Ditinjau</span>
-                                    @endif
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
 
-                    {{-- Card: Baru Saja Diunggah (Laporan) --}}
-                    <div class="bg-[#1b4c85] rounded-[2rem] p-6 text-white shadow-lg flex-1">
-                        <h3 class="text-xl font-bold mb-4 ml-1">Baru saja diunggah</h3>
-
-                        <div class="bg-[#153a66] rounded-xl p-5 shadow-inner">
-                            <h4 class="text-sm text-blue-200 mb-3 font-medium">Unggah Laporan</h4>
-                            <div class="space-y-3">
-                                @foreach($laporan_pkl as $ul)
-                                <div class="flex justify-between items-center group cursor-pointer">
-                                    <span class="text-sm font-light text-blue-50 group-hover:text-white transition">{{ $ul['judul'] }}</span>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
