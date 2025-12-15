@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMONE - Daftar MoU</title>
+    <title>SIMONE - Daftar PKS</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -36,8 +36,8 @@ x-data="{
         logo: null,
         instansi: '',
         keterangan: '',
-        no_mou_1: '', nama_1: '', jabatan_1: '',
-        no_mou_2: '', nama_2: '', jabatan_2: '',
+        no_pks_1: '', nama_1: '', jabatan_1: '',
+        no_pks_2: '', nama_2: '', jabatan_2: '',
         tgl_mulai: '', tgl_selesai: ''
     },
 
@@ -53,13 +53,13 @@ x-data="{
     monthNames: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
 
     activities: [
-        { instansi: 'PT Teknologi Harapan Bangsa', nomor_mou: 'MOU/THB/2025/001', tanggal_mulai: '01 Januari 2025', tanggal_selesai: '15 Januari 2026' },
-        { instansi: 'Universitas Negeri Yogyakarta', nomor_mou: 'MOU/UNY/KS/2025/042', tanggal_mulai: '15 Februari 2025', tanggal_selesai: '20 Desember 2027' },
-        { instansi: 'Dinas Kominfo Jawa Tengah', nomor_mou: 'DKI-JATENG/SPK/2024/112', tanggal_mulai: '10 Desember 2024', tanggal_selesai: '30 Januari 2026' },
-        { instansi: 'Rumah Sakit Sehat Sentosa', nomor_mou: 'RSSS/MOU/MEDIS/25/003', tanggal_mulai: '01 Maret 2025', tanggal_selesai: '01 Maret 2030' },
-        { instansi: 'CV Kreatif Digital Nusantara', nomor_mou: 'KDN/DN/2025/X/009', tanggal_mulai: '05 Januari 2025', tanggal_selesai: '01 Februari 2026' },
-        { instansi: 'Politeknik Elektronika Negeri', nomor_mou: 'PENS/KERJASAMA/2025/088', tanggal_mulai: '20 April 2025', tanggal_selesai: '20 April 2030' },
-        { instansi: 'Bank Syariah Amanah', nomor_mou: 'BSA/FIN/2025/002', tanggal_mulai: '02 Januari 2025', tanggal_selesai: '10 Januari 2026' }
+        { instansi: 'PT Teknologi Harapan Bangsa', nomor_pks: 'PKS/THB/2025/001', tanggal_mulai: '01 Januari 2025', tanggal_selesai: '15 Januari 2026' },
+        { instansi: 'Universitas Negeri Yogyakarta', nomor_pks: 'PKS/UNY/KS/2025/042', tanggal_mulai: '15 Februari 2025', tanggal_selesai: '20 Desember 2027' },
+        { instansi: 'Dinas Kominfo Jawa Tengah', nomor_pks: 'DKI-JATENG/SPK/2024/112', tanggal_mulai: '10 Desember 2024', tanggal_selesai: '30 Januari 2026' },
+        { instansi: 'Rumah Sakit Sehat Sentosa', nomor_pks: 'RSSS/PKS/MEDIS/25/003', tanggal_mulai: '01 Maret 2025', tanggal_selesai: '01 Maret 2030' },
+        { instansi: 'CV Kreatif Digital Nusantara', nomor_pks: 'KDN/DN/2025/X/009', tanggal_mulai: '05 Januari 2025', tanggal_selesai: '01 Februari 2026' },
+        { instansi: 'Politeknik Elektronika Negeri', nomor_pks: 'PENS/KERJASAMA/2025/088', tanggal_mulai: '20 April 2025', tanggal_selesai: '20 April 2030' },
+        { instansi: 'Bank Syariah Amanah', nomor_pks: 'BSA/FIN/2025/002', tanggal_mulai: '02 Januari 2025', tanggal_selesai: '10 Januari 2026' }
     ],
 
     parseDate(dateStr) {
@@ -101,7 +101,7 @@ x-data="{
             const lowerSearch = this.search.toLowerCase();
             result = result.filter(a => 
                 a.instansi.toLowerCase().includes(lowerSearch) || 
-                a.nomor_mou.toLowerCase().includes(lowerSearch)
+                a.nomor_pks.toLowerCase().includes(lowerSearch)
             );
         }
         return result;
@@ -146,13 +146,13 @@ x-data="{
         // Isi form dengan data yang ada
         this.form = {
             instansi: item.instansi,
-            no_mou_1: item.nomor_mou,
+            no_pks_1: item.nomor_pks,
             tgl_mulai: this.dateToInput(item.tanggal_mulai),
             tgl_selesai: this.dateToInput(item.tanggal_selesai),
             // Field lain dikosongkan/mock karena tidak ada di dummy data activities
             keterangan: item.keterangan || '',
             nama_1: '', jabatan_1: '',
-            no_mou_2: '', nama_2: '', jabatan_2: ''
+            no_pks_2: '', nama_2: '', jabatan_2: ''
         };
         
         this.isUploadModalOpen = true;
@@ -161,8 +161,8 @@ x-data="{
     resetForm() {
         this.form = {
             logo: null, instansi: '', keterangan: '', 
-            no_mou_1: '', nama_1: '', jabatan_1: '', 
-            no_mou_2: '', nama_2: '', jabatan_2: '', 
+            no_pks_1: '', nama_1: '', jabatan_1: '', 
+            no_pks_2: '', nama_2: '', jabatan_2: '', 
             tgl_mulai: '', tgl_selesai: ''
         };
         this.editingIndex = null;
@@ -184,7 +184,7 @@ x-data="{
 
         const dataPayload = {
             instansi: this.form.instansi,
-            nomor_mou: this.form.no_mou_1 || 'No. MoU Pending',
+            nomor_pks: this.form.no_pks_1 || 'No. PKS Pending',
             tanggal_mulai: formatIndo(this.form.tgl_mulai),
             tanggal_selesai: formatIndo(this.form.tgl_selesai)
         };
@@ -216,7 +216,7 @@ x-data="{
     <div class="flex-1 overflow-y-auto p-6">
         <div class="content-bg p-8 text-white shadow-2xl">
             <div class="flex flex-col xl:flex-row xl:justify-between xl:items-center gap-4 mb-8">
-                <h2 class="text-3xl font-bold">Daftar MoU</h2>
+                <h2 class="text-3xl font-bold">Daftar PKS</h2>
 
                 <div class="flex items-center gap-4">
                     <input type="text" x-model="search" @input="currentPage = 1" placeholder="Cari instansi..." class="bg-[#102d4f] border border-blue-400 text-white text-sm rounded-xl px-4 py-2 focus:outline-none placeholder:text-blue-300 w-48">
@@ -254,7 +254,7 @@ x-data="{
                         </div>
 
                         <div class="flex-1">
-                            <p class="text-xs text-blue-300 font-mono tracking-wide mb-1" x-text="item.nomor_mou"></p>
+                            <p class="text-xs text-blue-300 font-mono tracking-wide mb-1" x-text="item.nomor_pks"></p>
                             <h3 class="text-xl font-semibold text-white mb-3" x-text="item.instansi"></h3>
                             
                             <div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-sm text-blue-100/80">
@@ -327,7 +327,7 @@ x-data="{
         <div class="bg-[#1b4c85] w-full max-w-4xl rounded-2xl shadow-2xl border border-white/10 flex flex-col max-h-[90vh]">
             
             <div class="flex justify-between items-center p-6 border-b border-white/10">
-                <h3 class="text-2xl font-bold text-white" x-text="isEditing ? 'Edit Memorandum of Understanding (MoU)' : 'Unggah Memorandum of Understanding (MoU)'"></h3>
+                <h3 class="text-2xl font-bold text-white" x-text="isEditing ? 'Edit Perjanjian Kerja Sama (PKS)' : 'Unggah Perjanjian Kerja Sama (PKS)'"></h3>
                 <button @click="isUploadModalOpen = false" class="text-blue-200 hover:text-white transition">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -357,8 +357,8 @@ x-data="{
                         <div class="bg-[#153a66] p-4 rounded-xl border border-white/5 space-y-3 mt-4">
                             <h4 class="font-semibold text-blue-300 border-b border-white/10 pb-2">Data Pihak Pertama</h4>
                             <div>
-                                <label class="block text-xs text-blue-200 mb-1">Nomor MoU</label>
-                                <input type="text" x-model="form.no_mou_1" class="w-full bg-[#102d4f] border border-blue-400/50 rounded-lg px-3 py-1.5 text-sm">
+                                <label class="block text-xs text-blue-200 mb-1">Nomor PKS</label>
+                                <input type="text" x-model="form.no_pks_1" class="w-full bg-[#102d4f] border border-blue-400/50 rounded-lg px-3 py-1.5 text-sm">
                             </div>
                             <div>
                                 <label class="block text-xs text-blue-200 mb-1">Nama Pihak Pertama</label>
@@ -386,8 +386,8 @@ x-data="{
                         <div class="bg-[#153a66] p-4 rounded-xl border border-white/5 space-y-3 mt-4">
                             <h4 class="font-semibold text-blue-300 border-b border-white/10 pb-2">Data Pihak Kedua</h4>
                             <div>
-                                <label class="block text-xs text-blue-200 mb-1">Nomor MoU</label>
-                                <input type="text" x-model="form.no_mou_2" class="w-full bg-[#102d4f] border border-blue-400/50 rounded-lg px-3 py-1.5 text-sm">
+                                <label class="block text-xs text-blue-200 mb-1">Nomor PKS</label>
+                                <input type="text" x-model="form.no_pks_2" class="w-full bg-[#102d4f] border border-blue-400/50 rounded-lg px-3 py-1.5 text-sm">
                             </div>
                             <div>
                                 <label class="block text-xs text-blue-200 mb-1">Nama Pihak Kedua</label>

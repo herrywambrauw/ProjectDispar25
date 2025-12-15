@@ -116,7 +116,7 @@ Route::post('/register-confirm', [RegisteredUserController::class, 'confirmRegis
 
 
 
-
+// dashboard pemasaran
 Route::get('dashboard-pemasaran', function(){
     return view('dashboard.pemasaran.dashboard-pemasaran');
 });
@@ -127,6 +127,12 @@ Route::get('kegiatan', function(){
 Route::get('unggah-mou', function(){
     return view('dashboard.pemasaran.unggah-mou');
 });
+
+Route::get('unggah-pks', function(){
+    return view('dashboard.pemasaran.unggah-pks');
+});
+
+
 
 Route::middleware([
     'auth:sanctum',
