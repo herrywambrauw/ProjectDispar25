@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\PendaftaranPKLController;
+use App\Http\Controllers\PendaftaranPenelitianController;
 
 
 
@@ -15,7 +16,13 @@ Route::middleware(['auth'])->group(function () {
         ->name('pkl.store');
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/penelitian/daftar', [PendaftaranPenelitianController::class, 'create'])
+        ->name('penelitian.create');
 
+    Route::post('/penelitian/daftar', [PendaftaranPenelitianController::class, 'store'])
+        ->name('penelitian.store');
+});
 
 
 
