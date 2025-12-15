@@ -2,6 +2,24 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\PendaftaranPKLController;
+
+
+
+// Bagian Pendaftaran
+Route::middleware(['auth'])->group(function () {
+    Route::get('/pkl/daftar', [PendaftaranPKLController::class, 'create'])
+        ->name('pkl.create');
+
+    Route::post('/pkl/daftar', [PendaftaranPKLController::class, 'store'])
+        ->name('pkl.store');
+});
+
+
+
+
+
+
 
 Route::get('/', function () {
     return view('landingpage.index');
@@ -62,7 +80,7 @@ Route::get('form-pkl', function(){
 
 
 
-// Dashboard Peserta Magang 
+// Dashboard Peserta Magang
 
 Route::get('dashboard-magang', function(){
     return view('dashboard.peserta.magang.dashboard-magang');
@@ -84,14 +102,14 @@ Route::get('profil-pengguna', function(){
     return view('dashboard.peserta.magang.profil-pengguna');
 });
 
-//Batas Pendaftaran 
+//Batas Pendaftaran
 
 
 
 
 
 
-// ini khusus pendaftaran yh
+// Pendaftaran Akun User
 Route::get('/register-step1', function () {
     return view('auth.register-step1');
 })->name('register.step1');
@@ -111,6 +129,13 @@ Route::post('/register-step2', [RegisteredUserController::class, 'storeStep2'])
 
 Route::post('/register-confirm', [RegisteredUserController::class, 'confirmRegister'])
     ->name('register.confirm');
+
+
+
+
+
+
+
 
 
 
@@ -143,3 +168,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
