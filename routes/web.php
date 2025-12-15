@@ -120,6 +120,13 @@ Route::post('/register-confirm', [RegisteredUserController::class, 'confirmRegis
 Route::get('dashboard-pemasaran', function(){
     return view('dashboard.pemasaran.dashboard-pemasaran');
 });
+Route::get('kegiatan', function(){
+    return view('dashboard.pemasaran.kegiatan');
+});
+
+Route::get('unggah-mou', function(){
+    return view('dashboard.pemasaran.unggah-mou');
+});
 
 Route::middleware([
     'auth:sanctum',
