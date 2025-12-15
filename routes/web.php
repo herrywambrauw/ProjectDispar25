@@ -2,18 +2,29 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\PendaftaranMagangController;
 use App\Http\Controllers\PendaftaranPKLController;
 use App\Http\Controllers\PendaftaranPenelitianController;
 
 
 
+
 // Bagian Pendaftaran
 Route::middleware(['auth'])->group(function () {
+    //PKL
     Route::get('/pkl/daftar', [PendaftaranPKLController::class, 'create'])
         ->name('pkl.create');
 
     Route::post('/pkl/daftar', [PendaftaranPKLController::class, 'store'])
         ->name('pkl.store');
+
+    //Magang
+    Route::get('/pendaftaran-magang', [PendaftaranMagangController::class, 'create'])
+        ->name('magang.create');
+
+    Route::post('/pendaftaran-magang', [PendaftaranMagangController::class, 'store'])
+        ->name('magang.store');
+
 });
 
 Route::middleware(['auth'])->group(function () {
