@@ -159,6 +159,22 @@ Route::get('unggah-pks', function(){
 
 
 
+Route::get('dashboard-pendaftar', function(){
+    return view('dashboard.pendaftar.dashboard-pendaftar');
+});
+
+Route::get('dashboard-admin', function(){
+    return view('dashboard.admin.dashboard-admin');
+});
+
+Route::get('dashboard-pkl', function(){
+    return view('dashboard.peserta.pkl.dashboard-pkl');
+});
+
+Route::get('dashboard-penelitian', function(){
+    return view('dashboard.peserta.penelitian.dashboard-penelitian');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
