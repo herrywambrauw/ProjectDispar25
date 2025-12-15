@@ -25,15 +25,16 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/pendaftaran-magang', [PendaftaranMagangController::class, 'store'])
         ->name('magang.store');
 
-});
-
-Route::middleware(['auth'])->group(function () {
+    //penelitian
     Route::get('/penelitian/daftar', [PendaftaranPenelitianController::class, 'create'])
         ->name('penelitian.create');
 
     Route::post('/penelitian/daftar', [PendaftaranPenelitianController::class, 'store'])
         ->name('penelitian.store');
+
 });
+
+
 
 
 
