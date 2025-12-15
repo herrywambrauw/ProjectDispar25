@@ -6,16 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 
-class PendaftaranPenelitian extends Model
+class PendaftaranKKN extends Model
 {
-    use HasFactory;
+     use HasFactory;
 
-    protected $table = 'pendaftaran_penelitians';
+    protected $table = 'pendaftaran_kkns';
 
     protected $fillable = [
         'user_id',
-        'keterangan',
-        'judul_penelitian',
         'instansi',
         'prodi',
         'fakultas',
@@ -30,4 +28,5 @@ class PendaftaranPenelitian extends Model
     {
         return $this->belongsTo(User::class);
     }
+
 }

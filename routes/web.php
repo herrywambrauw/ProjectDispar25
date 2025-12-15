@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\PendaftaranMagangController;
 use App\Http\Controllers\PendaftaranPKLController;
 use App\Http\Controllers\PendaftaranPenelitianController;
+use App\Http\Controllers\PendaftaranKKNController;
 
 
 
@@ -32,6 +33,12 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/penelitian/daftar', [PendaftaranPenelitianController::class, 'store'])
         ->name('penelitian.store');
 
+    //KKN
+    Route::get('/kkn/daftar', [PendaftaranKKNController::class, 'create'])
+        ->name('kkn.create');
+
+    Route::post('/kkn/daftar', [PendaftaranKKNController::class, 'store'])
+        ->name('kkn.store');
 });
 
 

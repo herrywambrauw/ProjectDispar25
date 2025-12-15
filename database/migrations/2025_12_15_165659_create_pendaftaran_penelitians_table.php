@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pendaftaran_penelitian', function (Blueprint $table) {
+        Schema::create('pendaftaran_penelitians', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('judul_penelitian');
             $table->string('keterangan')->nullable();
             $table->string('instansi');
@@ -21,9 +22,10 @@ return new class extends Migration
             $table->string('pembimbing')->nullable();
             $table->string('nohp_pembimbing')->nullable();
             $table->date('tanggal_mulai');
-            $table->date('lokasi_tujuan');
+            $table->string('lokasi_tujuan');
             $table->string('surat');
             $table->timestamps();
+
         });
     }
 
@@ -32,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pendaftaran_penelitian');
+        Schema::dropIfExists('pendaftaran_penelitians');
     }
 };

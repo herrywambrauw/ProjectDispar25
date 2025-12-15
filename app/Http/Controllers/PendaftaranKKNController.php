@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\pendaftaranPenelitian;
+use App\Models\PendaftaranKKN;
 
-class PendaftaranPenelitianController extends Controller
+class PendaftaranKKNController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,12 +21,12 @@ class PendaftaranPenelitianController extends Controller
      */
     public function create()
     {
-        if (!Auth::check()) {
+       if (!Auth::check()) {
             return redirect()->route('register')
                 ->with('warning', 'Silakan daftar akun terlebih dahulu');
         }
 
-        return view('landingpage.form.form-penelitian', [
+        return view('landingpage.form.form-kkn', [
             'user' => Auth::user()
         ]);
     }
@@ -36,13 +36,11 @@ class PendaftaranPenelitianController extends Controller
      */
     public function store(Request $request)
     {
-        if (!Auth::check()) {
+      if (!Auth::check()) {
             return redirect()->route('login');
         }
 
         $request->validate([
-            'judul_penelitian' => 'required|string|max:255',
-            'keterangan'       => 'nullable|string|max:255',
             'instansi'         => 'required|string|max:255',
             'prodi'            => 'required|string|max:255',
             'fakultas'         => 'required|string|max:255',
@@ -53,12 +51,10 @@ class PendaftaranPenelitianController extends Controller
             'surat'            => 'required|mimes:pdf|max:2048',
         ]);
 
-        $path = $request->file('surat')->store('surat_penelitian', 'public');
+        $path = $request->file('surat')->store('surat_kkn', 'public');
 
-        PendaftaranPenelitian::create([
+        PendaftaranKKN::create([
             'user_id'          => Auth::id(),
-            'judul_penelitian' => $request->judul_penelitian,
-            'keterangan'       => $request->keterangan,
             'instansi'         => $request->instansi,
             'prodi'            => $request->prodi,
             'fakultas'         => $request->fakultas,
@@ -70,7 +66,7 @@ class PendaftaranPenelitianController extends Controller
         ]);
 
         return redirect()->route('dashboard')
-        ->with('success', 'Pendaftaran Penelitian berhasil dikirim.');
+        ->with('success', 'Pendaftaran KKN berhasil dikirim.');
     }
 
     /**
