@@ -19,8 +19,15 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:50', Rule::unique('users')->ignore($user->id)],
             'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
             'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],
+            'nik' => ['required', 'string'],
+            'jenis_kelamin' => ['required', 'in:L,P'],
+            'tempat_lahir' => ['required', 'string'],
+            'tanggal_lahir' => ['required', 'date'],
+            'no_hp' => ['required', 'string'],
+            'alamat' => ['required', 'string'],
         ])->validateWithBag('updateProfileInformation');
 
         if (isset($input['photo'])) {
@@ -33,7 +40,14 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
         } else {
             $user->forceFill([
                 'name' => $input['name'],
+                'username' => $input['username'],
                 'email' => $input['email'],
+                'nik' => $input['nik'],
+                'jenis_kelamin' => $input['jenis_kelamin'],
+                'tempat_lahir' => $input['tempat_lahir'],
+                'tanggal_lahir' => $input['tanggal_lahir'],
+                'no_hp' => $input['no_hp'],
+                'alamat' => $input['alamat'],
             ])->save();
         }
     }
@@ -49,6 +63,12 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'name' => $input['name'],
             'email' => $input['email'],
             'email_verified_at' => null,
+            'nik' => $input['nik'],
+            'jenis_kelamin' => $input['jenis_kelamin'],
+            'tempat_lahir' => $input['tempat_lahir'],
+            'tanggal_lahir' => $input['tanggal_lahir'],
+            'no_hp' => $input['no_hp'],
+            'alamat' => $input['alamat'],
         ])->save();
 
         $user->sendEmailVerificationNotification();
