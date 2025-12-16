@@ -79,9 +79,8 @@
                     :class="(openKerjasama || activeMenu.includes('unggah-')) ? 'bg-white/10 text-white border-l-4 border-blue-300 shadow-sm' : 'text-blue-100 hover:bg-white/5'"
                 >
                     <div class="flex items-center gap-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
-                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M17 13a4 4 0 0 1 4 4v1a2 2 0 0 1-2 2h-1.5m-3-15.83a3 3 0 1 1 0 5.659M3 18v-1a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm9-11a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z"/>
                         </svg>
                         <span class="nav-text transition-opacity duration-200" x-show="sidebarOpen">Kerjasama</span>
                     </div>

@@ -29,8 +29,8 @@ x-data="{
     
     // --- STATE MODAL & FORM ---
     isUploadModalOpen: false,
-    isEditing: false, // Penanda mode edit
-    editingIndex: null, // Index data yang sedang diedit
+    isEditing: false, 
+    editingIndex: null, 
     
     form: {
         logo: null,
@@ -43,7 +43,7 @@ x-data="{
 
     filterTime: 'all', 
     search: '',
-    perPage: 10,
+    perPage: 10, // Default 10 data
     currentPage: 1,
 
     monthMap: {
@@ -52,6 +52,7 @@ x-data="{
     },
     monthNames: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
 
+    // Data Dummy (Lebih dari 10 agar pagination muncul)
     activities: [
         { instansi: 'PT Teknologi Harapan Bangsa', nomor_mou: 'MOU/THB/2025/001', tanggal_mulai: '01 Januari 2025', tanggal_selesai: '15 Januari 2026' },
         { instansi: 'Universitas Negeri Yogyakarta', nomor_mou: 'MOU/UNY/KS/2025/042', tanggal_mulai: '15 Februari 2025', tanggal_selesai: '20 Desember 2027' },
@@ -59,7 +60,12 @@ x-data="{
         { instansi: 'Rumah Sakit Sehat Sentosa', nomor_mou: 'RSSS/MOU/MEDIS/25/003', tanggal_mulai: '01 Maret 2025', tanggal_selesai: '01 Maret 2030' },
         { instansi: 'CV Kreatif Digital Nusantara', nomor_mou: 'KDN/DN/2025/X/009', tanggal_mulai: '05 Januari 2025', tanggal_selesai: '01 Februari 2026' },
         { instansi: 'Politeknik Elektronika Negeri', nomor_mou: 'PENS/KERJASAMA/2025/088', tanggal_mulai: '20 April 2025', tanggal_selesai: '20 April 2030' },
-        { instansi: 'Bank Syariah Amanah', nomor_mou: 'BSA/FIN/2025/002', tanggal_mulai: '02 Januari 2025', tanggal_selesai: '10 Januari 2026' }
+        { instansi: 'Bank Syariah Amanah', nomor_mou: 'BSA/FIN/2025/002', tanggal_mulai: '02 Januari 2025', tanggal_selesai: '10 Januari 2026' },
+        { instansi: 'PT Maju Mundur Cantik', nomor_mou: 'MMC/HR/2025/001', tanggal_mulai: '01 Februari 2025', tanggal_selesai: '01 Februari 2026' },
+        { instansi: 'CV Sejahtera Abadi', nomor_mou: 'SA/MOU/2025/101', tanggal_mulai: '10 Maret 2025', tanggal_selesai: '10 Maret 2026' },
+        { instansi: 'Universitas Gadjah Mada', nomor_mou: 'UGM/KS/2025/555', tanggal_mulai: '01 April 2025', tanggal_selesai: '01 April 2028' },
+        { instansi: 'PT Indofood Sukses', nomor_mou: 'IFS/MOU/2025/009', tanggal_mulai: '15 April 2025', tanggal_selesai: '15 April 2026' },
+        { instansi: 'Dinas Pariwisata Bali', nomor_mou: 'DPB/KS/2025/012', tanggal_mulai: '20 Mei 2025', tanggal_selesai: '20 Mei 2027' }
     ],
 
     parseDate(dateStr) {
@@ -70,7 +76,6 @@ x-data="{
         return new Date(year, month, day);
     },
 
-    // Helper: Mengubah '01 Januari 2025' menjadi '2025-01-01' untuk input HTML
     dateToInput(dateStr) {
         if(!dateStr) return '';
         const parts = dateStr.split(' ');
@@ -107,27 +112,43 @@ x-data="{
         return result;
     },
 
-    get paginatedActivities() {
-        const start = (this.currentPage - 1) * this.perPage;
-        return this.filteredActivities.slice(start, start + this.perPage);
+    // --- LOGIKA PAGINATION ---
+    get totalPages() {
+        return Math.ceil(this.filteredActivities.length / this.perPage) || 1;
     },
 
-    // --- FUNGSI AKSI (EDIT & DELETE) ---
+    get paginatedActivities() {
+        // Reset page jika filter mengubah total halaman jadi lebih kecil dari page saat ini
+        if (this.currentPage > this.totalPages) {
+            this.currentPage = 1;
+        }
+        
+        const start = (this.currentPage - 1) * this.perPage;
+        return this.filteredActivities.slice(start, start + parseInt(this.perPage));
+    },
+
+    nextPage() {
+        if (this.currentPage < this.totalPages) {
+            this.currentPage++;
+        }
+    },
+
+    prevPage() {
+        if (this.currentPage > 1) {
+            this.currentPage--;
+        }
+    },
+
     deleteActivity(index) {
-        // Karena pagination, index yang diterima adalah index halaman saat ini
-        // Kita perlu mencari index asli di array 'activities'
-        // Namun untuk simplicitas contoh ini, kita pakai logika sederhana:
         if (confirm('Yakin ingin menghapus data kerjasama ini?')) {
-            const realIndex = (this.currentPage - 1) * this.perPage + index; 
-            // Note: Logika realIndex ini asumsi tanpa filter. 
-            // Jika ada filter, sebaiknya gunakan ID unik. Tapi ini cukup untuk prototype.
-            
-            // Mencari item di array asli untuk dihapus
             const itemToDelete = this.paginatedActivities[index];
             const actualIndex = this.activities.indexOf(itemToDelete);
             
             if(actualIndex > -1) {
                 this.activities.splice(actualIndex, 1);
+            }
+            if (this.paginatedActivities.length === 0 && this.currentPage > 1) {
+                this.currentPage--;
             }
         }
     },
@@ -140,16 +161,13 @@ x-data="{
 
     editActivity(item) {
         this.isEditing = true;
-        // Simpan referensi item asli untuk diupdate nanti
         this.editingIndex = this.activities.indexOf(item);
 
-        // Isi form dengan data yang ada
         this.form = {
             instansi: item.instansi,
             no_mou_1: item.nomor_mou,
             tgl_mulai: this.dateToInput(item.tanggal_mulai),
             tgl_selesai: this.dateToInput(item.tanggal_selesai),
-            // Field lain dikosongkan/mock karena tidak ada di dummy data activities
             keterangan: item.keterangan || '',
             nama_1: '', jabatan_1: '',
             no_mou_2: '', nama_2: '', jabatan_2: ''
@@ -190,11 +208,9 @@ x-data="{
         };
 
         if (this.isEditing && this.editingIndex !== null) {
-            // Logic Update
             this.activities[this.editingIndex] = dataPayload;
             alert('Data berhasil diperbarui!');
         } else {
-            // Logic Create
             this.activities.unshift(dataPayload);
             alert('Data berhasil ditambahkan!');
         }
@@ -205,25 +221,23 @@ x-data="{
 }"
 >
 
-<!-- SIDEBAR -->
 @include('dashboard.pemasaran.components.sidebar')
 
 <main class="flex-1 flex flex-col min-w-0 relative">
-    <!-- HEADER -->
-@include('dashboard.pemasaran.components.header')
-
+    @include('components.header-dashboard')
 
     <div class="flex-1 overflow-y-auto p-6">
-        <div class="content-bg p-8 text-white shadow-2xl">
+        <div class="content-bg p-8 text-white shadow-2xl flex flex-col min-h-full">
             <div class="flex flex-col xl:flex-row xl:justify-between xl:items-center gap-4 mb-8">
                 <h2 class="text-3xl font-bold">Daftar MoU</h2>
 
                 <div class="flex items-center gap-4">
                     <input type="text" x-model="search" @input="currentPage = 1" placeholder="Cari instansi..." class="bg-[#102d4f] border border-blue-400 text-white text-sm rounded-xl px-4 py-2 focus:outline-none placeholder:text-blue-300 w-48">
 
-                    <select x-model="perPage" @change="currentPage = 1" class="bg-[#102d4f] border border-blue-400 text-white text-sm rounded-xl px-4 py-2 focus:outline-none">
+                    <select x-model="perPage" @change="currentPage = 1" class="bg-[#102d4f] border border-blue-400 text-white text-sm rounded-xl px-4 py-2 focus:outline-none cursor-pointer">
                         <option value="10">10 Data</option>
                         <option value="20">20 Data</option>
+                        <option value="50">50 Data</option>
                     </select>
 
                     <select x-model="filterTime" @change="currentPage = 1" class="bg-[#102d4f] border border-blue-400 text-white text-sm rounded-xl px-4 py-2 focus:outline-none cursor-pointer hover:bg-[#153a66] transition">
@@ -243,7 +257,7 @@ x-data="{
                 </div>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-4 flex-1">
                 <template x-for="(item, index) in paginatedActivities" :key="index">
                     <div class="card-item-bg p-6 rounded-xl shadow-lg flex flex-col md:flex-row md:items-center gap-6 border border-white/10 hover:border-blue-400/50 transition duration-300">
 
@@ -303,14 +317,41 @@ x-data="{
             <div x-show="filteredActivities.length === 0" x-cloak class="flex flex-col items-center justify-center py-12 text-blue-200 opacity-70">
                 <p class="text-lg">Tidak ada data yang sesuai filter</p>
             </div>
-            <div class="flex justify-between items-center mt-8 border-t border-white/10 pt-4">
-                <p class="text-sm text-blue-200">
-                    Menampilkan <span class="font-bold text-white" x-text="paginatedActivities.length"></span>
-                    dari <span class="font-bold text-white" x-text="filteredActivities.length"></span> data
-                </p>
-            </div>
 
-        </div>
+            <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-blue-400/30" x-show="filteredActivities.length > 0">
+                    
+                <p class="text-sm text-blue-200">
+                    Menampilkan
+                    <span class="font-bold text-white" x-text="paginatedActivities.length"></span>
+                    dari
+                    <span class="font-bold text-white" x-text="filteredActivities.length"></span>
+                    data
+                </p>
+
+                <div class="flex items-center gap-2" x-show="totalPages > 1" x-cloak>
+                    <button 
+                        @click="prevPage" 
+                        :disabled="currentPage === 1"
+                        :class="currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-500'"
+                        class="px-4 py-2 bg-[#102d4f] border border-blue-400 rounded-lg text-sm transition text-white">
+                        &laquo; Sebelumnya
+                    </button>
+
+                    <div class="px-4 py-2 bg-blue-600/20 rounded-lg text-sm border border-blue-400/50 text-white">
+                        Hal <span x-text="currentPage"></span> / <span x-text="totalPages"></span>
+                    </div>
+
+                    <button 
+                        @click="nextPage" 
+                        :disabled="currentPage === totalPages"
+                        :class="currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-500'"
+                        class="px-4 py-2 bg-[#102d4f] border border-blue-400 rounded-lg text-sm transition text-white">
+                        Selanjutnya &raquo;
+                    </button>
+                </div>
+
+            </div>
+            </div>
     </div>
 
     <div

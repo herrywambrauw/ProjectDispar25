@@ -133,6 +133,10 @@ Route::get('unggah-pks', function(){
 });
 
 
+// dashboard sekretaris
+Route::get('dashboard-sekretaris', function(){
+    return view('dashboard.sekretaris.dashboard-sekre');
+});
 
 Route::middleware([
     'auth:sanctum',
