@@ -5,7 +5,7 @@
 // Mobile-first: hamburger menu shows nav on small screens.
 
 ?>
-<header class="bg-[#0D2C54] text-white shadow-md">
+<header class="sticky top-0 z-10 bg-[#0D2C54] text-white shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         <!-- LOGO -->
@@ -68,7 +68,7 @@
 </div> <!-- pastikan ini adalah penutup container utama header Anda -->
 
 <!-- MOBILE MENU -->
-<div id="mobile-menu" class="hidden bg-[#0D2C54] md:hidden px-6 pb-4 space-y-3">
+<div id="mobile-menu" class="hidden sticky top-0 z-10 bg-[#0D2C54] md:hidden px-6 pb-4 space-y-3">
     <a href="/" class="block py-2 border-b border-white/20">Beranda</a>
     <div class="relative inline-block">
         <button onclick="toggleDropdownMobile()" class="flex items-center hover:text-blue-200">

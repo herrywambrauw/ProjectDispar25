@@ -2,6 +2,50 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\PendaftaranMagangController;
+use App\Http\Controllers\PendaftaranPKLController;
+use App\Http\Controllers\PendaftaranPenelitianController;
+use App\Http\Controllers\PendaftaranKKNController;
+
+
+
+
+// Bagian Pendaftaran
+Route::middleware(['auth'])->group(function () {
+    //PKL
+    Route::get('/pkl/daftar', [PendaftaranPKLController::class, 'create'])
+        ->name('pkl.create');
+
+    Route::post('/pkl/daftar', [PendaftaranPKLController::class, 'store'])
+        ->name('pkl.store');
+
+    //Magang
+    Route::get('/pendaftaran-magang', [PendaftaranMagangController::class, 'create'])
+        ->name('magang.create');
+
+    Route::post('/pendaftaran-magang', [PendaftaranMagangController::class, 'store'])
+        ->name('magang.store');
+
+    //penelitian
+    Route::get('/penelitian/daftar', [PendaftaranPenelitianController::class, 'create'])
+        ->name('penelitian.create');
+
+    Route::post('/penelitian/daftar', [PendaftaranPenelitianController::class, 'store'])
+        ->name('penelitian.store');
+
+    //KKN
+    Route::get('/kkn/daftar', [PendaftaranKKNController::class, 'create'])
+        ->name('kkn.create');
+
+    Route::post('/kkn/daftar', [PendaftaranKKNController::class, 'store'])
+        ->name('kkn.store');
+});
+
+
+
+
+
+
 
 Route::get('/', function () {
     return view('landingpage.index');
@@ -62,7 +106,7 @@ Route::get('form-pkl', function(){
 
 
 
-// Dashboard Peserta Magang 
+// Dashboard Peserta Magang
 
 Route::get('dashboard-magang', function(){
     return view('dashboard.peserta.magang.dashboard-magang');
@@ -84,14 +128,14 @@ Route::get('profil-pengguna', function(){
     return view('dashboard.peserta.magang.profil-pengguna');
 });
 
-//Batas Pendaftaran 
+//Batas Pendaftaran
 
 
 
 
 
 
-// ini khusus pendaftaran yh
+// Pendaftaran Akun User
 Route::get('/register-step1', function () {
     return view('auth.register-step1');
 })->name('register.step1');
@@ -111,6 +155,13 @@ Route::post('/register-step2', [RegisteredUserController::class, 'storeStep2'])
 
 Route::post('/register-confirm', [RegisteredUserController::class, 'confirmRegister'])
     ->name('register.confirm');
+
+
+
+
+
+
+
 
 
 
@@ -138,6 +189,22 @@ Route::get('dashboard-sekretaris', function(){
     return view('dashboard.sekretaris.dashboard-sekre');
 });
 
+Route::get('dashboard-pendaftar', function(){
+    return view('dashboard.pendaftar.dashboard-pendaftar');
+});
+
+Route::get('dashboard-admin', function(){
+    return view('dashboard.admin.dashboard-admin');
+});
+
+Route::get('dashboard-pkl', function(){
+    return view('dashboard.peserta.pkl.dashboard-pkl');
+});
+
+Route::get('dashboard-penelitian', function(){
+    return view('dashboard.peserta.penelitian.dashboard-penelitian');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -147,3 +214,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+

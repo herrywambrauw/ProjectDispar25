@@ -121,4 +121,10 @@ class User extends Authenticatable
     {
         return $this->role === 'pemasaran';
     }
+
+    public function pkl()
+    {
+        return $this->hasMany(\App\Models\PendaftaranPKL::class);
+    }
+
 }
