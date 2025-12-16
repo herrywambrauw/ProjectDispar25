@@ -114,7 +114,7 @@ x-data="{
     <main class="flex-1 flex flex-col min-w-0">
 
          {{-- HEADER --}}
-        @include('dashboard.pemasaran.components.header')
+        @include('components.header-dashboard')
 
         <div class="flex-1 overflow-y-auto p-6">
 
